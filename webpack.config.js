@@ -26,12 +26,9 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
+            'css-loader?minimize',
             'postcss-loader',
           ],
-          options: {
-            minimize: true,
-          },
         }),
       },
     ],
