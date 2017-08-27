@@ -1,3 +1,2 @@
-.hoge{
-  margin: 0;
-}
+@import './styles/**/*.css';
+@import './components/**/*.css';
