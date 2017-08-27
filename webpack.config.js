@@ -1,5 +1,5 @@
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const webpack = require('webpack');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -35,6 +35,7 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('bundle.css'),
   ],
 
