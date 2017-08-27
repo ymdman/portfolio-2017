@@ -29,6 +29,9 @@ module.exports = {
             'css-loader',
             'postcss-loader',
           ],
+          options: {
+            minimize: true,
+          },
         }),
       },
     ],
