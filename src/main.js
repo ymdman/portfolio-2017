@@ -9,11 +9,11 @@ import './main.css';
 
 ReactDom.render(
   <BrowserRouter>
-    <Route component={App}>
-      <Route path="/" component={About} />
-      <Route path="/skill" component={Skill} />
-      <Route path="/career" component={Career} />
-    </Route>
+    <App>
+      <Route exact path="/" component={About} />
+      <Route path="skill" component={Skill} />
+      <Route path="career" component={Career} />
+    </App>
   </BrowserRouter>,
   document.getElementById('app'),
 );
