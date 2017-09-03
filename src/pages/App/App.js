@@ -4,7 +4,7 @@ import GlobalFooter from '../../components/GlobalFooter/GlobalFooter';
 
 const App = () => (
   <div className="wrapper">
-    <GlobalHeader />
+    <GlobalHeader title="hoge" />
     <mian>main</mian>
     <GlobalFooter />
   </div>
