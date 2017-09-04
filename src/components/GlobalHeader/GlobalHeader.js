@@ -8,15 +8,25 @@ export default class GlobalHeader extends React.Component {
     this.state = {
       title: 'fuga',
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentWillMount() {
+    console.log('コンポーネントのマウント前');
+  }
+
+  handleClick() {
+    this.setState({ title: 'piyo' });
   }
 
   render() {
     return (
       <header className="l-global-header">
-        <h1>{this.props.title}</h1>
+        <h1>{this.state.title}</h1>
         <nav>
           <ul>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/about" onClick={() => this.handleClick()}>About</Link></li>
             <li><Link to="/skill">Skill</Link></li>
             <li><Link to="/career">Career</Link></li>
           </ul>
@@ -26,6 +36,6 @@ export default class GlobalHeader extends React.Component {
   }
 }
 
-GlobalHeader.propTypes = {
-  title: React.PropTypes.string.isRequired,
-};
+// GlobalHeader.propTypes = {
+//   title: React.PropTypes.string.isRequired,
+// };
