@@ -1,0 +1,3 @@
+const CHANGE_CONTENT = 'CHANGE_CONTENT';
+
+export default CHANGE_CONTENT;
