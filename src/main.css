@@ -1,2 +1,5 @@
-@import './styles/**/*.css';
-@import './components/**/*.css';
+@charset "utf-8";
+
+@import './styles/normalize.css';
+@import './styles/variable.css';
+@import './components/**/*.css'

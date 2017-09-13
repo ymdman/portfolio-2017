@@ -1,0 +1,14 @@
+// ================================
+// Menu Button
+// ================================
+.menu-button__top,
+.menu-button__center,
+.menu-button__bottom {
+  background-color: var(--clr-base);
+  width: 30px;
+  height: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

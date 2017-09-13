@@ -1,0 +1,4 @@
+const CHANGE_DRAWER_MENU = 'CHANGE_DRAWER_MENU';
+const HOGE = 'HOGE';
+
+export { CHANGE_DRAWER_MENU, HOGE };

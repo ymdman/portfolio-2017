@@ -1,5 +1,15 @@
+const postcssEasyImport = require('postcss-easy-import');
+const postcssCssnext = require('postcss-cssnext');
+// const autoprefixer = require('autoprefixer');
+
 module.exports = {
   plugins: [
-    require('postcss-easy-import')({ glob: true }),
+    postcssEasyImport({
+      glob: true,
+    }),
+    postcssCssnext({
+      browsers: ['last 2 versions'],
+    }),
+    // autoprefixer,
   ],
 };
