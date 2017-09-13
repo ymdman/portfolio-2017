@@ -1,10 +1,11 @@
-// ================================
-// Menu Button
-// ================================
+/**
+ * Menu Button
+ */
+
 .menu-button__top,
 .menu-button__center,
 .menu-button__bottom {
-  background-color: var(--clr-base);
+  background-color: #333;
   width: 30px;
   height: 5px;
   margin-top: 10px;

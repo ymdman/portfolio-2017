@@ -7602,7 +7602,7 @@ var GlobalHeader = function GlobalHeader() {
     { className: 'global-header' },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'h1',
-      null,
+      { className: 'global-header__logo' },
       'Kazuhiro Yamada'
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__MenuButton_MenuButton__["a" /* default */], null),

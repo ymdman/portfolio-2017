@@ -1,5 +1,7 @@
 @charset "utf-8";
 
 @import './styles/normalize.css';
+@import './styles/fonts.css';
 @import './styles/variable.css';
-@import './components/**/*.css'
+@import './styles/base.css';
+@import './components/**/*.css';

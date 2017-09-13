@@ -1,3 +1,40 @@
+/**
+ * Variable
+ */
+
 :root {
-  --clr-base: #333;
+  /* Font Face */
+  --ff-base:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    MyYuGothicM,
+    Meiryo,
+    sans-serif;
+
+  /*  Font Size */
+  --fs-base: 62.5%;
+  --fs-x-small: 1rem;
+  --fs-small: 1.3rem;
+  --fs-middle: 1.6rem;
+  --fs-large: 1.9rem;
+  --fs-x-large: 2.2rem;
+  --fs-xx-large: 2.5rem;
+  --fs-xxx-large: 2.8rem;
+  --fs-xxxx-large: 3.1rem;
+  --fs-xxxxx-large: 3.4rem;
+
+  /* Line Height */
+  --lh-small: 1.3;
+  --lh-base: 1.5;
+  --lh-large: 1.7;
+
+  /* Color */
+  --clr-base: #515151;
+  --clr-thema: #ff0;
+
+  /* Media Queries */
+  @custom-media --mq-sp (max-width: 639px);
+  @custom-media --mq-tb (max-width: 1023px);
+  @custom-media --mq-pc (min-width: 1024px);
 }
