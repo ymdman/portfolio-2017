@@ -1,6 +1,6 @@
 const postcssEasyImport = require('postcss-easy-import');
 const postcssCssnext = require('postcss-cssnext');
-// const autoprefixer = require('autoprefixer');
+const styleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   plugins: [
@@ -10,6 +10,6 @@ module.exports = {
     postcssCssnext({
       browsers: ['last 2 versions'],
     }),
-    // autoprefixer,
+    styleLintPlugin,
   ],
 };
