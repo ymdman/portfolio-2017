@@ -1,6 +1,11 @@
-// ================================
-// Global Footer
-// ================================
+/**
+ * Global Footer
+ */
+
 .global-footer {
   margin: 0;
+}
+
+.global-footer__copyright {
+  text-align: center;
 }

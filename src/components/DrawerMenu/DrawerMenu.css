@@ -2,6 +2,27 @@
  * Drawer Menu
  */
 
-.hoge {
-  margin: 0;
+.drawer-menu {
+  position: fixed;
+  background-color: #ccc;
+  height: 100%;
+  width: 200px;
+}
+
+.drawer-menu-enter {
+  opacity: 0.01;
+}
+
+.drawer-menu-enter.drawer-menu-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.drawer-menu-exit {
+  opacity: 1;
+}
+
+.drawer-menu-exit.drawer-menu-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

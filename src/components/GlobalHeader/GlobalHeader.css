@@ -1,6 +1,16 @@
-// ================================
-// Global Header
-// ================================
+/**
+ * Global Header
+ */
+
 .global-header {
-  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.global-header__logo {
+  margin-right: auto;
+  font-size: var(--fs-x-large);
 }
