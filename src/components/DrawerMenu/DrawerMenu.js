@@ -4,23 +4,32 @@ import { connect } from 'react-redux';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
 const DURATION = 300;
-const DEFAULT_STYLE = {
-  transition: `opacity ${DURATION}ms ease-in-out`,
-  opacity: 0,
-};
+
+const Fade = ({ children, ...props }) => (
+  <CSSTransition
+    {...props}
+    timeout={DURATION}
+    classNames="drawer-menu"
+  >
+    {children}
+  </CSSTransition>
+);
 
 const DrawerMenu = ({ drawerMenu }) => (
-  <CSSTransition timeout={DURATION} style={DEFAULT_STYLE}>
+  <Fade in={drawerMenu}>
     <nav className="drawer-menu">
-      <p>{console.log(drawerMenu)}</p>
       <ul>
         <li><Link to="/">About</Link></li>
         <li><Link to="/skill">Skill</Link></li>
         <li><Link to="/career">Career</Link></li>
       </ul>
     </nav>
-  </CSSTransition>
+  </Fade>
 );
+
+Fade.propTypes = {
+  children: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+};
 
 DrawerMenu.propTypes = {
   drawerMenu: React.PropTypes.bool.isRequired,
