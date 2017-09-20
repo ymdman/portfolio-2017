@@ -2,29 +2,26 @@
  * Drawer Menu
  */
 
-
-
 .drawer-menu {
-  position: fixed;
-  background-color: #ccc;
+  background-color: #fff;
   height: 100%;
   width: 200px;
 }
 
 .drawer-menu-enter {
-  opacity: 0.01;
+  left: 0;
 }
 
 .drawer-menu-enter.drawer-menu-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+  left: 0;
+  transition: left 300ms ease-in;
 }
 
 .drawer-menu-exit {
-  opacity: 1;
+  left: 0;
 }
 
 .drawer-menu-exit.drawer-menu-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  left: -200px;
+  transition: left 300ms ease-in;
 }

@@ -37,4 +37,9 @@
   @custom-media --mq-sp (max-width: 639px);
   @custom-media --mq-tb (max-width: 1023px);
   @custom-media --mq-pc (min-width: 1024px);
+
+  /* Duration */
+  --drn-fast: 200ms;
+  --drn-normal: 400ms;
+  --drn-slow: 600ms;
 }
