@@ -6,8 +6,8 @@ const DrawerMenu = () => (
   <nav className="drawer-menu">
     <ul>
       <li><Link to="/">About</Link></li>
-      <li><Link to="/skill">Skill</Link></li>
-      <li><Link to="/career">Career</Link></li>
+      <li>Skill</li>
+      <li>Career</li>
     </ul>
   </nav>
 );
