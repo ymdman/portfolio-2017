@@ -15,7 +15,7 @@ MenuButton.propTypes = {
 
 const mapStateToProps = (state) => {
   const data = {
-    drawerMenu: state.ChangeDrawerMenu.drawerMenu,
+    drawerMenu: state.Index.drawerMenu,
   };
 
   return data;
@@ -24,9 +24,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   const data = {
     menuButtonClick: () => {
-      dispatch({
-        type: 'CHANGE_DRAWER_MENU',
-      });
+      dispatch({ type: 'CHANGE_DRAWER_MENU' });
     },
   };
 

@@ -18,6 +18,15 @@ class App extends React.Component {
   }
 
   render() {
+    console.log('fuga', this.props.contentType);
+    if (this.props.contentType === 'skill') {
+      console.log('Skill');
+    } else if (this.props.contentType === 'about') {
+      console.log('About');
+    } else if (this.props.contentType === 'career') {
+      console.log('career');
+    }
+
     return (
       <div className="wrapper">
         <Sidebar
@@ -38,12 +47,14 @@ class App extends React.Component {
 
 App.propTypes = {
   drawerMenu: React.PropTypes.bool.isRequired,
+  contentType: React.PropTypes.string.isRequired,
   overRayClick: React.PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {
   const data = {
-    drawerMenu: state.ChangeDrawerMenu.drawerMenu,
+    drawerMenu: state.Index.drawerMenu,
+    contentType: state.Index.contentType,
   };
 
   return data;

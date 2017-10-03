@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import ChangeDrawerMenu from './reducers/ChangeDrawerMenu';
+import Index from './reducers';
 
 const rootReducer = combineReducers({
-  ChangeDrawerMenu,
+  Index,
 });
 
 export default rootReducer;
