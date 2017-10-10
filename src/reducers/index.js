@@ -12,10 +12,6 @@ const reducer = (state = initialState, action) => {
         drawerMenu: !state.drawerMenu,
       });
 
-      // return {
-      //   drawerMenu: !state.drawerMenu,
-      // };
-
     case ActionTypes.CONTENT_ABOUT:
       return Object.assign({}, state, {
         contentType: 'about',

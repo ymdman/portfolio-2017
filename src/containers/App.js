@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   onSetSidebarOpen() {
-    console.log('aaa', this);
+    this.props.actions.changeDrawerMenu();
   }
 
   render() {
@@ -35,6 +35,7 @@ class App extends React.Component {
       <div className="wrapper">
         <Sidebar
           sidebar={<DrawerMenu />}
+          open={this.props.currentState.drawerMenu}
           onSetOpen={this.onSetSidebarOpen}
         >
           <GlobalHeader {...props} />
@@ -48,26 +49,22 @@ class App extends React.Component {
   }
 }
 
-// App.propTypes = {
-//   piyo: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-//   hoge: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-// };
-
-const mapStateToProps = (state) => {
-  const data = {
-    hoge: state.Index,
-  };
-
-  return data;
+App.propTypes = {
+  actions: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  currentState: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
-const mapDispatchToProps = (dispatch) => {
-  const data = {
-    piyo: bindActionCreators(ActionCreator, dispatch),
-  };
+const mapStateToProps = state => (
+  {
+    currentState: state.Index,
+  }
+);
 
-  return data;
-};
+const mapDispatchToProps = dispatch => (
+  {
+    actions: bindActionCreators(ActionCreator, dispatch),
+  }
+);
 
 export default connect(
   mapStateToProps,
