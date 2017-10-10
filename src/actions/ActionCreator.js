@@ -1,22 +1,23 @@
 import * as ActionTypes from '../constants/actionTypes';
 
-const changeDrawerMenu = (stateDrawerMenu) => {
-  console.log('fdafa');
+const changeDrawerMenu = (fada) => {
+  console.log(fada);
   const data = {
     type: ActionTypes.CHANGE_DRAWER_MENU,
-    stateDrawerMenu,
+    drawerMenu: true,
   };
 
   return data;
 };
 
-// const changeContent = (fuga) => {
-//   const data = {
-//     type: ActionTypes.CONTENT_SKILL,
-//     contentType: fuga,
-//   };
 
-//   return data;
-// };
+const changeContent = () => {
+  const data = {
+    type: ActionTypes.CONTENT_SKILL,
+    contentType: 'skill',
+  };
+
+  return data;
+};
 
 export default { changeDrawerMenu, changeContent };

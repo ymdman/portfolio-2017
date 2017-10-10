@@ -1,37 +1,48 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
-const MenuButton = ({ menuButtonClick }) => (
-  <div className="menu-button" onClick={() => { menuButtonClick(); }} tabIndex="0" role="button">
+const MenuButton = props => (
+  <div className="menu-button" tabIndex="0" role="button">
+    {console.log(props)}
     <div className="menu-button__top" />
     <div className="menu-button__center" />
     <div className="menu-button__bottom" />
   </div>
 );
 
-MenuButton.propTypes = {
-  menuButtonClick: React.PropTypes.func.isRequired,
-};
+// const MenuButton = ({ menuButtonClick }) => (
+//   <div className="menu-button" onClick={() => { menuButtonClick(); }} tabIndex="0" role="button">
+//     <div className="menu-button__top" />
+//     <div className="menu-button__center" />
+//     <div className="menu-button__bottom" />
+//   </div>
+// );
 
-const mapStateToProps = (state) => {
-  const data = {
-    drawerMenu: state.Index.drawerMenu,
-  };
+// MenuButton.propTypes = {
+//   menuButtonClick: React.PropTypes.func.isRequired,
+// };
 
-  return data;
-};
+// const mapStateToProps = (state) => {
+//   const data = {
+//     drawerMenu: state.Index.drawerMenu,
+//   };
 
-const mapDispatchToProps = (dispatch) => {
-  const data = {
-    menuButtonClick: () => {
-      dispatch({ type: 'CHANGE_DRAWER_MENU' });
-    },
-  };
+//   return data;
+// };
 
-  return data;
-};
+// const mapDispatchToProps = (dispatch) => {
+//   const data = {
+//     menuButtonClick: () => {
+//       dispatch({ type: 'CHANGE_DRAWER_MENU' });
+//     },
+//   };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(MenuButton);
+//   return data;
+// };
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps,
+// )(MenuButton);
+
+export default MenuButton;

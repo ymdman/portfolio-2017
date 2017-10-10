@@ -1,6 +1,8 @@
 import React from 'react';
 import Sidebar from 'react-sidebar';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import ActionCreator from '../actions/ActionCreator';
 
 import GlobalHeader from '../components/GlobalHeader/GlobalHeader';
 import GlobalFooter from '../components/GlobalFooter/GlobalFooter';
@@ -14,27 +16,28 @@ class App extends React.Component {
   }
 
   onSetSidebarOpen() {
-    this.props.overRayClick();
+    console.log('aaa', this);
   }
 
   render() {
-    console.log('fuga', this.props.contentType);
-    if (this.props.contentType === 'skill') {
-      console.log('Skill');
-    } else if (this.props.contentType === 'about') {
-      console.log('About');
-    } else if (this.props.contentType === 'career') {
-      console.log('career');
-    }
+    const props = this.props;
+
+    // console.log('fuga', this.props.contentType);
+    // if (this.props.contentType === 'skill') {
+    //   console.log('Skill');
+    // } else if (this.props.contentType === 'about') {
+    //   console.log('About');
+    // } else if (this.props.contentType === 'career') {
+    //   console.log('career');
+    // }
 
     return (
       <div className="wrapper">
         <Sidebar
           sidebar={<DrawerMenu />}
-          open={this.props.drawerMenu}
           onSetOpen={this.onSetSidebarOpen}
         >
-          <GlobalHeader />
+          <GlobalHeader {...props} />
           <main>
             <p>lorem</p>
           </main>
@@ -45,16 +48,14 @@ class App extends React.Component {
   }
 }
 
-App.propTypes = {
-  drawerMenu: React.PropTypes.bool.isRequired,
-  contentType: React.PropTypes.string.isRequired,
-  overRayClick: React.PropTypes.func.isRequired,
-};
+// App.propTypes = {
+//   piyo: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+//   hoge: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+// };
 
 const mapStateToProps = (state) => {
   const data = {
-    drawerMenu: state.Index.drawerMenu,
-    contentType: state.Index.contentType,
+    hoge: state.Index,
   };
 
   return data;
@@ -62,19 +63,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   const data = {
-    overRayClick: () => {
-      dispatch({
-        type: 'CHANGE_DRAWER_MENU',
-      });
-    },
+    piyo: bindActionCreators(ActionCreator, dispatch),
   };
 
   return data;
 };
 
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(App);
-

@@ -8,9 +8,13 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.CHANGE_DRAWER_MENU:
-      return {
+      return Object.assign({}, state, {
         drawerMenu: !state.drawerMenu,
-      };
+      });
+
+      // return {
+      //   drawerMenu: !state.drawerMenu,
+      // };
 
     case ActionTypes.CONTENT_ABOUT:
       return Object.assign({}, state, {
