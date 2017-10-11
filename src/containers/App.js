@@ -22,19 +22,10 @@ class App extends React.Component {
   render() {
     const props = this.props;
 
-    // console.log('fuga', this.props.contentType);
-    // if (this.props.contentType === 'skill') {
-    //   console.log('Skill');
-    // } else if (this.props.contentType === 'about') {
-    //   console.log('About');
-    // } else if (this.props.contentType === 'career') {
-    //   console.log('career');
-    // }
-
     return (
       <div className="wrapper">
         <Sidebar
-          sidebar={<DrawerMenu />}
+          sidebar={<DrawerMenu {...props} />}
           open={this.props.currentState.drawerMenu}
           onSetOpen={this.onSetSidebarOpen}
         >
@@ -50,8 +41,17 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  actions: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  currentState: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  actions: React.PropTypes.shape({
+    changeDrawerMenu: React.PropTypes.func.isRequired,
+  }),
+  currentState: React.PropTypes.shape({
+    drawerMenu: React.PropTypes.bool.isRequired,
+  }),
+};
+
+App.defaultProps = {
+  actions: {},
+  currentState: {},
 };
 
 const mapStateToProps = state => (

@@ -14,7 +14,13 @@ const MenuButton = props => (
 );
 
 MenuButton.propTypes = {
-  actions: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  actions: React.PropTypes.shape({
+    changeDrawerMenu: React.PropTypes.func.isRequired,
+  }),
+};
+
+MenuButton.defaultProps = {
+  actions: {},
 };
 
 export default MenuButton;
