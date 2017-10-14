@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from 'react-sidebar';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ActionCreator from '../actions/ActionCreator';
 
 import GlobalHeader from '../components/GlobalHeader/GlobalHeader';
@@ -27,23 +27,25 @@ class App extends React.Component {
     const props = this.props;
 
     return (
-      <div className="wrapper">
-        <Sidebar
-          sidebar={<DrawerMenu {...props} />}
-          open={props.currentState.drawerMenu}
-          onSetOpen={this.onSetSidebarOpen}
-        >
-          <GlobalHeader {...props} />
-          <main className="piyo">
-            <Switch>
-              <Route exact path="/" component={ContentAbout} />
-              <Route path="/skill" component={ContentSkill} />
-              <Route path="/career" component={ContentCareer} />
-            </Switch>
-          </main>
-          <GlobalFooter />
-        </Sidebar>
-      </div>
+      <BrowserRouter>
+        <div className="wrapper">
+          <Sidebar
+            sidebar={<DrawerMenu {...props} />}
+            open={props.currentState.drawerMenu}
+            onSetOpen={this.onSetSidebarOpen}
+          >
+            <GlobalHeader {...props} />
+            <main className="piyo">
+              <Switch>
+                <Route exact path="/" component={ContentAbout} />
+                <Route path="/skill" component={ContentSkill} />
+                <Route path="/career" component={ContentCareer} />
+              </Switch>
+            </main>
+            <GlobalFooter />
+          </Sidebar>
+        </div>
+      </BrowserRouter>
     );
   }
 }
@@ -63,15 +65,11 @@ App.defaultProps = {
 };
 
 const mapStateToProps = state => (
-  {
-    currentState: state.Index,
-  }
+  { currentState: state.Index }
 );
 
 const mapDispatchToProps = dispatch => (
-  {
-    actions: bindActionCreators(ActionCreator, dispatch),
-  }
+  { actions: bindActionCreators(ActionCreator, dispatch) }
 );
 
 export default connect(
