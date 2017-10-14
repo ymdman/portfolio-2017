@@ -15,6 +15,8 @@ ReactDom.render(
     <BrowserRouter>
       <div>
         <Route exact path="/" component={App} />
+        <Route path="/skill" component={App} />
+        <Route path="/career" component={App} />
       </div>
     </BrowserRouter>
   </Provider>,

@@ -17,7 +17,7 @@ const DrawerMenu = props => (
       </li>
       <li>
         <Link
-          to="/"
+          to="/skill"
           onClick={() => {
             props.actions.changeDrawerMenu();
             props.actions.changeContentSkill();
@@ -28,7 +28,7 @@ const DrawerMenu = props => (
       </li>
       <li>
         <Link
-          to="/"
+          to="/career"
           onClick={() => {
             props.actions.changeDrawerMenu();
             props.actions.changeContentCareer();
