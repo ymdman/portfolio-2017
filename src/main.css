@@ -5,3 +5,7 @@
 @import './styles/variable.css';
 @import './styles/base.css';
 @import './components/**/*.css';
+
+.piyo {
+  text-align: right;
+}

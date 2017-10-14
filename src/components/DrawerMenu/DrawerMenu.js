@@ -5,37 +5,13 @@ const DrawerMenu = props => (
   <nav className="drawer-menu">
     <ul>
       <li>
-        <Link
-          to="/"
-          onClick={() => {
-            props.actions.changeDrawerMenu();
-            props.actions.changeContentAbout();
-          }}
-        >
-        About
-        </Link>
+        <Link to="/" onClick={() => { props.actions.changeDrawerMenu(); }}>About</Link>
       </li>
       <li>
-        <Link
-          to="/skill"
-          onClick={() => {
-            props.actions.changeDrawerMenu();
-            props.actions.changeContentSkill();
-          }}
-        >
-        Skill
-        </Link>
+        <Link to="/skill" onClick={() => { props.actions.changeDrawerMenu(); }}>Skill</Link>
       </li>
       <li>
-        <Link
-          to="/career"
-          onClick={() => {
-            props.actions.changeDrawerMenu();
-            props.actions.changeContentCareer();
-          }}
-        >
-        Career
-        </Link>
+        <Link to="/career" onClick={() => { props.actions.changeDrawerMenu(); }}>Career</Link>
       </li>
     </ul>
   </nav>
@@ -44,9 +20,6 @@ const DrawerMenu = props => (
 DrawerMenu.propTypes = {
   actions: React.PropTypes.shape({
     changeDrawerMenu: React.PropTypes.func.isRequired,
-    changeContentAbout: React.PropTypes.func.isRequired,
-    changeContentSkill: React.PropTypes.func.isRequired,
-    changeContentCareer: React.PropTypes.func.isRequired,
   }),
 };
 

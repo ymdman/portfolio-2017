@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from 'react-sidebar';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 import ActionCreator from '../actions/ActionCreator';
 
 import GlobalHeader from '../components/GlobalHeader/GlobalHeader';
@@ -25,16 +26,6 @@ class App extends React.Component {
   render() {
     const props = this.props;
 
-    let Content = <ContentAbout />;
-
-    if (props.currentState.contentType === 'about') {
-      Content = <ContentAbout />;
-    } else if (props.currentState.contentType === 'skill') {
-      Content = <ContentSkill />;
-    } else if (props.currentState.contentType === 'career') {
-      Content = <ContentCareer />;
-    }
-
     return (
       <div className="wrapper">
         <Sidebar
@@ -43,8 +34,12 @@ class App extends React.Component {
           onSetOpen={this.onSetSidebarOpen}
         >
           <GlobalHeader {...props} />
-          <main>
-            {Content}
+          <main className="piyo">
+            <Switch>
+              <Route exact path="/" component={ContentAbout} />
+              <Route path="/skill" component={ContentSkill} />
+              <Route path="/career" component={ContentCareer} />
+            </Switch>
           </main>
           <GlobalFooter />
         </Sidebar>
