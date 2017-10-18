@@ -37,7 +37,7 @@ class App extends React.Component {
             <GlobalHeader {...props} />
             <main className="piyo">
               <Switch>
-                <Route exact path="/" component={ContentAbout} />
+                <Route exact path="/" render={() => <ContentAbout {...props} />} />
                 <Route path="/skill" component={ContentSkill} />
                 <Route path="/career" component={ContentCareer} />
               </Switch>

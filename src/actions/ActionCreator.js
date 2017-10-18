@@ -7,6 +7,14 @@ const changeDrawerMenu = () => (
   }
 );
 
+const getWindowHeight = () => (
+  {
+    type: ActionTypes.WINDOW_HEIGHT,
+    windowHeight: 0,
+  }
+);
+
 export default {
   changeDrawerMenu,
+  getWindowHeight,
 };

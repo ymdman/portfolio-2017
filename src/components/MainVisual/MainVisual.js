@@ -8,18 +8,20 @@ class MainVisual extends React.Component {
   }
 
   componentDidMount() {
+    this.getWindowHeight();
+
     window.addEventListener('resize', () => {
       this.getWindowHeight();
     }, false);
   }
 
   getWindowHeight() {
-    this.hoge = window.innerHeight;
+    this.props.actions.getWindowHeight();
   }
 
   render() {
     return (
-      <div className="main-visual" style={{ height: 500 }}>
+      <div className="main-visual" style={{ height: this.props.currentState.windowHeight }}>
         <div className="main-visual__inner">
           <h2>Kazuhiro Yamada</h2>
           <p>Front End Engineer / Web Designer</p>
@@ -28,5 +30,19 @@ class MainVisual extends React.Component {
     );
   }
 }
+
+MainVisual.propTypes = {
+  actions: React.PropTypes.shape({
+    getWindowHeight: React.PropTypes.func.isRequired,
+  }),
+  currentState: React.PropTypes.shape({
+    windowHeight: React.PropTypes.number.isRequired,
+  }),
+};
+
+MainVisual.defaultProps = {
+  actions: {},
+  currentState: {},
+};
 
 export default MainVisual;

@@ -1,9 +1,9 @@
 import React from 'react';
 import MainVisual from '../MainVisual/MainVisual';
 
-const ContentAbout = () => (
+const ContentAbout = props => (
   <div>
-    <MainVisual />
+    <MainVisual {...props} />
     <p>About</p>
   </div>
 );
