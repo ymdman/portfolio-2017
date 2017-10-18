@@ -13,8 +13,8 @@ import ContentSkill from '../components/ContentSkill/ContentSkill';
 import ContentCareer from '../components/ContentCareer/ContentCareer';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }

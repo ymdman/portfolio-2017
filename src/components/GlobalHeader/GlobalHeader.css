@@ -8,6 +8,11 @@
   border-bottom: solid 1px #ccc;
   padding: 10px 20px;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .global-header__logo {
