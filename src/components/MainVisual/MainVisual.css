@@ -4,7 +4,7 @@
 
 .main-visual {
   position: relative;
-  background-image: url(https://dummyimage.com/600x400/000/fff);
+  background-image: url("/images/img-main-visual.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
