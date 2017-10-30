@@ -15,7 +15,7 @@
 .menu-button__top,
 .menu-button__center,
 .menu-button__bottom {
-  background-color: var(--clr-base);
+  background-color: #fff;
   width: 30px;
   height: 4px;
 }

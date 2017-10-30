@@ -15,6 +15,7 @@
 }
 
 .global-header__logo {
+  color: #fff;
   margin-right: auto;
   font-size: var(--fs-x-large);
 }

@@ -5,17 +5,22 @@
 .main-visual {
   position: relative;
   background-image: url("/images/img-main-visual.jpg");
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
   overflow: hidden;
   width: 100%;
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-visual__inner {
-  display: table-cell;
   text-align: center;
-  vertical-align: middle;
+  color: #fff;
+}
+
+.main-visual-title {
+  font-size: var(--fs-xxxxxx-large);
 }

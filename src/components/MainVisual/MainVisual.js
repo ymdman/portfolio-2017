@@ -23,7 +23,7 @@ class MainVisual extends React.Component {
     return (
       <div className="main-visual" style={{ height: this.props.currentState.windowHeight }}>
         <div className="main-visual__inner">
-          <h2>Kazuhiro Yamada</h2>
+          <h2 className="main-visual-title">Kazuhiro Yamada</h2>
           <p>Front End Engineer / Web Designer</p>
         </div>
       </div>

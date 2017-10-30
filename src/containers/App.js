@@ -35,7 +35,7 @@ class App extends React.Component {
             onSetOpen={this.onSetSidebarOpen}
           >
             <GlobalHeader {...props} />
-            <main className="piyo">
+            <main>
               <Switch>
                 <Route exact path="/" render={() => <ContentAbout {...props} />} />
                 <Route path="/skill" component={ContentSkill} />
