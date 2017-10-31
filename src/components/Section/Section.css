@@ -1,23 +1,20 @@
+/**
+ * Section
+ */
 
-.content {
+.section {
   margin-top: 70px;
   padding-right: 10%;
   padding-left: 10%;
 }
 
-.content__title {
+.section__title {
   text-align: center;
   font-weight: normal;
   font-size: var(--fs-xxxx-large);
 }
 
-.content__detail {
+.section__detail {
   margin-top: 15px;
   text-align: center;
-}
-
-.list {
-
-
-
 }

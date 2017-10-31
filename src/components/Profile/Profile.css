@@ -1,0 +1,23 @@
+/**
+ * Profile
+ */
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile__image {
+  border-radius: 50%;
+  width: 150px;
+  overflow: hidden;
+  margin-right: 20px;
+
+  & > img {
+    width: 100%;
+  }
+}
+
+.profile__content {
+  text-align: left;
+}
