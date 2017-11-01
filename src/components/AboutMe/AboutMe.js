@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Profile = () => (
-  <div className="profile">
-    <div className="profile__image"><img src="https://dummyimage.com/300x300/000/fff" alt="" /></div>
-    <div className="profile__content">
+const AboutMe = () => (
+  <div className="about-me">
+    <div className="about-me__image"><img src="https://dummyimage.com/300x300/000/fff" alt="" /></div>
+    <div className="about-me__content">
       <p>Kazuhiro Yamada</p>
       <p>ポートフォリオサイトになりますポートフォリオサイト<br />
       になりますポートフォリオサイトになります<br />
@@ -12,4 +12,4 @@ const Profile = () => (
   </div>
 );
 
-export default Profile;
+export default AboutMe;

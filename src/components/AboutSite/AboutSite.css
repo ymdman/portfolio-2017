@@ -1,0 +1,19 @@
+/**
+ * About Site
+ */
+
+.about-site-constitution {
+  margin-top: 15px;
+}
+
+.about-site-constitution__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  & > li + li::before {
+    content: "/";
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}

@@ -1,18 +1,18 @@
 import React from 'react';
 import MainVisual from '../MainVisual/MainVisual';
 import Section from '../Section/Section';
-import Description from '../Description/Description';
-import Profile from '../Profile/Profile';
+import AboutSite from '../AboutSite/AboutSite';
+import AboutMe from '../AboutMe/AboutMe';
 
 const ContentAbout = props => (
   <div>
     <MainVisual {...props} />
-    <Section title={'About'}>
-      <Description />
+    <Section title={'About Site'}>
+      <AboutSite />
     </Section>
 
-    <Section title={'Me'}>
-      <Profile />
+    <Section title={'About Me'}>
+      <AboutMe />
     </Section>
   </div>
 );
