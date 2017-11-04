@@ -45,6 +45,8 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
   ],
 
+  devtool: 'inline-source-map',
+
   devServer: {
     contentBase: './public',
     port: 3000,
