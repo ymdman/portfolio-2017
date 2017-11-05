@@ -4,8 +4,32 @@
 
 .drawer-menu {
   background-color: #fff;
+  display: inline-block;
   height: 100%;
-  width: 200px;
+  width: 300px;
+}
+
+.drawer-menu__title {
+  font-size: var(--fs-large);
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.drawer-menu__list {
+  margin-top: 10px;
+
+  & > li {
+    & > a {
+      text-decoration: none;
+      color: var(--clr-base);
+      display: block;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
 }
 
 .drawer-menu-enter {
@@ -22,6 +46,6 @@
 }
 
 .drawer-menu-exit.drawer-menu-exit-active {
-  left: -200px;
+  left: -300px;
   transition: left 300ms ease-in;
 }
