@@ -1,15 +1,21 @@
-const postcssEasyImport = require('postcss-easy-import');
-const postcssCssnext = require('postcss-cssnext');
-const styleLintPlugin = require('stylelint-webpack-plugin');
-
 module.exports = {
-  plugins: [
-    postcssEasyImport({
+  plugins: {
+    'postcss-easy-import': {
       glob: true,
-    }),
-    postcssCssnext({
-      browsers: ['last 2 versions'],
-    }),
-    styleLintPlugin,
-  ],
+    },
+    'stylelint-webpack-plugin': {},
+    'postcss-sorting': {
+      'properties-order': 'alphabetical',
+    },
+    'postcss-cssnext': {
+      browsers: 'last 2 major versions',
+    },
+    'cssnano': {
+      autoprefixer: false,
+      zindex: false,
+      normalizeCharset: false,
+      minifySelectors: false,
+      reduceIdents: false,
+    },
+  },
 };
