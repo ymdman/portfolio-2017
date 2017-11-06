@@ -9,7 +9,7 @@
 
 .about-me__image {
   border-radius: 50%;
-  width: 150px;
+  width: 180px;
   overflow: hidden;
   margin-right: 20px;
 
@@ -20,4 +20,16 @@
 
 .about-me__content {
   text-align: left;
+}
+
+.about-me-title {
+  line-height: var(--lh-small);
+}
+
+.about-me-sub-title {
+  font-weight: normal;
+}
+
+.about-me-text {
+  margin-top: 15px;
 }
