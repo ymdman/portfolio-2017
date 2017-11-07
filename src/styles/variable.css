@@ -33,6 +33,7 @@
   /* Color */
   --clr-base: #515151;
   --clr-thema: #ff0;
+  --clr-link: #0366d6;
 
   /* Media Queries */
   @custom-media --mq-sp (max-width: 639px);
