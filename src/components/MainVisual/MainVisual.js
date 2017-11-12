@@ -1,6 +1,6 @@
 import React from 'react';
 
-class MainVisual extends React.Component {
+export default class MainVisual extends React.Component {
   constructor() {
     super();
 
@@ -44,5 +44,3 @@ MainVisual.defaultProps = {
   actions: {},
   currentState: {},
 };
-
-export default MainVisual;

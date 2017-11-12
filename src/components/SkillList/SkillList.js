@@ -2,9 +2,9 @@ import React from 'react';
 import { HorizontalBar } from 'react-chartjs-2';
 
 const data = {
-  labels: ['JavaScript', 'CSS', 'HTML'],
+  labels: ['JavaScript', 'CSS', 'HTML', 'PHP', 'Photoshop', 'Illustrator'],
   datasets: [{
-    data: [80, 70, 75],
+    data: [80, 70, 75, 80, 70, 75],
     label: ['A', 'B', 'C'],
     backgroundColor: [
       'rgb(255, 99, 132)',
