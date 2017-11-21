@@ -1,11 +1,11 @@
 import React from 'react';
 import Section from '../Section/Section';
-import SkillList from '../SkillList/SkillList';
+import SkillGraph from '../SkillGraph/SkillGraph';
 
 const ContentSkill = () => (
   <div>
     <Section title={'Skill'}>
-      <SkillList />
+      <SkillGraph />
     </Section>
   </div>
 );
