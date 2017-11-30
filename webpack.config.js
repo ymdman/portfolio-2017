@@ -30,14 +30,14 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true
-              }
+                sourceMap: true,
+              },
             },
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: true
-              }
+                sourceMap: true,
+              },
             },
             // 'css-loader',
             // 'postcss-loader',
@@ -61,7 +61,7 @@ module.exports = {
 
   devServer: {
     contentBase: './public',
-    port: 3000,
+    port: 3001,
     historyApiFallback: true,
   },
 };
