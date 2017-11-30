@@ -1,7 +1,13 @@
 import React from 'react';
+import Section from '../Section/Section';
+import CareerList from '../CareerList/CareerList';
 
 const ContentCareer = () => (
-  <p>Career</p>
+  <div>
+    <Section title={'Career'}>
+      <CareerList />
+    </Section>
+  </div>
 );
 
 export default ContentCareer;
