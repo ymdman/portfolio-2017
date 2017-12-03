@@ -5,6 +5,9 @@ export default class CareerList extends React.Component {
   constructor() {
     super();
 
+    this.state = {
+      data: [],
+    };
     this.fetchData = this.fetchData.bind(this);
   }
 
@@ -17,13 +20,24 @@ export default class CareerList extends React.Component {
       .get('./data/career.json')
       .set('Content-Type', 'application/json')
       .end((err, res) => {
-        console.log(err, res, this);
+        this.setState({
+          data: res.body,
+        });
       });
   }
 
   render() {
+    console.log(this.state.data, 'afafa');
     return (
-      <div>hoge</div>
+      <div>
+        {this.state.data.map((hoge) => {
+          const fuga = hoge.companyName;
+          const id = hoge.job;
+          return (
+            <div key={id}>{fuga}</div>
+          );
+        })}
+      </div>
     );
   }
 }
