@@ -41,6 +41,7 @@ const reducer = (state = initialState, action) => {
         response: false,
         postSucces: false,
         postFailure: true,
+        careerData: action.careerData,
       });
 
     default:

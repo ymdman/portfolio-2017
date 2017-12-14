@@ -4,41 +4,47 @@
     "job": "Front-End Engineer / Web Designer",
     "status": "正社員",
     "experience": "2015.12 〜",
-    "description": "色々やってます色々やってます色々やってます"
+    "description": "色々やってます色々やってます色々やってます",
+    "key": 1
   },
   {
     "companyName": "株式会社fuga",
     "job": "Front-End Engineer",
     "status": "正社員",
     "experience": "2013.08 〜 2015.11",
-    "description": "JavaScriptコーディングをメインに大規模サイトのリニューアルや運用を担当しております。"
+    "description": "JavaScriptコーディングをメインに大規模サイトのリニューアルや運用を担当しております。",
+    "key": 2
   },
   {
     "companyName": "piyo株式会社",
     "job": "Markup Engineer",
     "status": "正社員",
     "experience": "2010.09 〜 2012.10",
-    "description": "大規模サイトの運用や新規構築などをマークアップエンジニアとして担当させて頂きました。"
+    "description": "大規模サイトの運用や新規構築などをマークアップエンジニアとして担当させて頂きました。",
+    "key": 3
   },
   {
     "companyName": "株式会社hoo",
     "job": "Web Designer",
     "status": "正社員",
     "experience": "2008.09 〜 2010.03",
-    "description": "デザイン/HTMLコーディング/Flashと一通りのWeb制作を担当しました"
+    "description": "デザイン/HTMLコーディング/Flashと一通りのWeb制作を担当しました",
+    "key": 4
   },
   {
     "companyName": "株式会社hogefuga",
     "job": "Sales Staff",
     "status": "正社員",
     "experience": "2004.09 〜 2007.11",
-    "description": "フライヤーの制作を担当しました"
+    "description": "フライヤーの制作を担当しました",
+    "key": 5
   },
   {
     "companyName": "株式会社hogefuga",
     "job": "DTP Operator",
     "status": "正社員",
     "experience": "2003.07 〜 2004.08",
-    "description": "デザインに関しては様々なタイプの広告を作成しましたので引き出しを増やすことができました。"
+    "description": "デザインに関しては様々なタイプの広告を作成しましたので引き出しを増やすことができました。",
+    "key": 6
   }
 ]

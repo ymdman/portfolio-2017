@@ -24,7 +24,6 @@ const postRequest = () => (
 const postSucces = careerData => (
   {
     type: ActionTypes.POST_SUCCESS,
-    postSucces: true,
     careerData,
   }
 );
@@ -32,7 +31,6 @@ const postSucces = careerData => (
 const postFailure = () => (
   {
     type: ActionTypes.POST_FAILURE,
-    postFailure: true,
   }
 );
 
@@ -45,7 +43,7 @@ const fetchPost = () => (
       .set('Content-Type', 'application/json')
       .end((err, res) => {
         if (err) {
-          dispatch(postFailure(err));
+          dispatch(postFailure());
         } else {
           dispatch(postSucces(res.body));
         }

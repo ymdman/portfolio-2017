@@ -4,21 +4,30 @@ import { connect } from 'react-redux';
 import ActionCreator from '../../actions/ActionCreator';
 
 class CareerList extends React.Component {
-  constructor() {
-    super();
-
-    console.log('aa');
-  }
-
   componentDidMount() {
     this.props.actions.fetchPost();
   }
 
   render() {
     return (
-      <div>
-        {console.log(this.props.currentState.careerData)}
-      </div>
+      <ul className="career-list">
+        {
+          this.props.currentState.careerData.map(data => (
+            <li key={data.key}>
+              <h3>{data.companyName}</h3>
+              <dl>
+                <dt>Job</dt>
+                <dd>{data.job}</dd>
+                <dt>status</dt>
+                <dd>{data.status}</dd>
+                <dt>experience</dt>
+                <dd>{data.experience}</dd>
+              </dl>
+              <p>{data.description}</p>
+            </li>
+          ))
+        }
+      </ul>
     );
   }
 }
@@ -28,7 +37,6 @@ CareerList.propTypes = {
     fetchPost: React.PropTypes.func.isRequired,
   }),
   currentState: React.PropTypes.shape({
-    response: React.PropTypes.bool.isRequired,
     careerData: React.PropTypes.array.isRequired,
   }),
 };
