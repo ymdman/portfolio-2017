@@ -1,11 +1,9 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ActionCreator from '../../actions/ActionCreator';
 
 class CareerList extends React.Component {
   componentDidMount() {
-    this.props.actions.fetchPost();
+    console.log('fdaf');
   }
 
   render() {
@@ -33,16 +31,12 @@ class CareerList extends React.Component {
 }
 
 CareerList.propTypes = {
-  actions: React.PropTypes.shape({
-    fetchPost: React.PropTypes.func.isRequired,
-  }),
   currentState: React.PropTypes.shape({
     careerData: React.PropTypes.array.isRequired,
   }),
 };
 
 CareerList.defaultProps = {
-  actions: {},
   currentState: {},
 };
 
@@ -50,11 +44,7 @@ const mapStateToProps = state => (
   { currentState: state.Index }
 );
 
-const mapDispatchToProps = dispatch => (
-  { actions: bindActionCreators(ActionCreator, dispatch) }
-);
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
 )(CareerList);
