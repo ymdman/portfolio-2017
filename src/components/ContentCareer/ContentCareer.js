@@ -3,66 +3,41 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ActionCreator from '../../actions/ActionCreator';
 
-// import Section from '../Section/Section';
+import Section from '../Section/Section';
 import CareerList from '../CareerList/CareerList';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import Loading from '../Loading/Loading';
 
 class ContentCareer extends React.Component {
   componentDidMount() {
-    console.log(this.props.actions, 'afdassfda');
     this.props.actions.fetchPost();
   }
 
   render() {
     const currentState = this.props.currentState;
     let careerList;
+    let loading;
     let errorMessage;
 
-    console.log(currentState);
-    if (currentState.postSucces) {
+    if (currentState.response) {
+      loading = <Loading />;
+    } else if (currentState.postSucces) {
       careerList = <CareerList />;
     } else if (currentState.postFailure) {
       errorMessage = <ErrorMessage />;
     }
 
     return (
-      <div>
-        {careerList}
-        {errorMessage}
-      </div>
+      <Section title={'Career'}>
+        <div>
+          {loading}
+          {careerList}
+          {errorMessage}
+        </div>
+      </Section>
     );
   }
 }
-
-
-// const ContentCareer = (props) => {
-//   const currentState = props.currentState;
-//   let careerList;
-//   let errorMessage;
-
-//   console.log(currentState);
-//   if (currentState.postSucces) {
-//     careerList = <CareerList />;
-//   } else if (currentState.postFailure) {
-//     errorMessage = <ErrorMessage />;
-//   }
-
-//   return (
-//     <div>
-//       {careerList}
-//       {errorMessage}
-//     </div>
-//   );
-// };
-
-// const ContentCareer = props => (
-//   <div>
-//     {console.log(props.currentState.postSucces)}
-
-//     <ErrorMessage />
-//     <CareerList />
-//   </div>
-// );
 
 ContentCareer.propTypes = {
   actions: React.PropTypes.shape({
