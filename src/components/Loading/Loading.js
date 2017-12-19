@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactLoading from 'react-loading';
 
 const Loading = () => (
-  <div>
-    <p>読み込み中</p>
+  <div className="loading">
+    <ReactLoading type="bars" color="#515151" />
   </div>
 );
 
