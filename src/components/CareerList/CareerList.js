@@ -10,18 +10,30 @@ class CareerList extends React.Component {
     return (
       <ul className="career-list">
         {
-          this.props.currentState.careerData.map(data => (
-            <li key={data.key}>
-              <h3>{data.companyName}</h3>
+          this.props.currentState.careerData.map(career => (
+            <li key={career.key}>
+              <h3>{career.companyName}</h3>
               <dl>
                 <dt>Job</dt>
-                <dd>{data.job}</dd>
+                <dd>{career.job}</dd>
                 <dt>status</dt>
-                <dd>{data.status}</dd>
+                <dd>{career.status}</dd>
                 <dt>experience</dt>
-                <dd>{data.experience}</dd>
+                <dd>{career.experience}</dd>
               </dl>
-              <p>{data.description}</p>
+              <p>{career.description}</p>
+              <ul className="career-list__project">
+                {
+                  career.projects.map(projects => (
+                    <li key={projects.siteName}>
+                      <a href={projects.url}>
+                        <h4>{projects.siteName}</h4>
+                        <div><img src={projects.imagePath} alt={projects.siteName} /></div>
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
             </li>
           ))
         }

@@ -1,7 +1,15 @@
+/**
+ * Career List
+ */
+
 .career-list {
   list-style: none;
 
   & > li + li {
     margin-top: 80px;
   }
+}
+
+.career-list__project {
+  list-style: none;
 }
