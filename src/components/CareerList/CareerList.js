@@ -56,7 +56,6 @@ const mapStateToProps = state => (
   { currentState: state.Index }
 );
 
-
 export default connect(
   mapStateToProps,
 )(CareerList);
