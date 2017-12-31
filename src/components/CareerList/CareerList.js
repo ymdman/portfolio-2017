@@ -2,8 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class CareerList extends React.Component {
-  componentDidMount() {
-    console.log('fdaf');
+  constructor() {
+    super();
+
+    this.showModal = this.showModal.bind(this);
+  }
+
+  showModal() {
+    console.log(this);
   }
 
   render() {
@@ -26,10 +32,10 @@ class CareerList extends React.Component {
                 {
                   career.projects.map(projects => (
                     <li key={projects.siteName}>
-                      <a href={projects.url}>
+                      <div onClick={() => { this.showModal(); }} role="button" tabIndex="0">
                         <h4>{projects.siteName}</h4>
                         <div><img src={projects.imagePath} alt={projects.siteName} /></div>
-                      </a>
+                      </div>
                     </li>
                   ))
                 }
