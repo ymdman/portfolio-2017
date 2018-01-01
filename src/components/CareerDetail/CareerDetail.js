@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CareerDetail = () => (
+const CareerDetail = projects => (
   <div className="about-me">
-    <p>fuga</p>
+    <p>{console.log(projects.projects.develop)}</p>
   </div>
 );
 
