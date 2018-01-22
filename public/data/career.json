@@ -1,6 +1,6 @@
 [
   {
-    "companyName": "株式会社hoge",
+    "companyName": "株式会社hogsse",
     "job": "Front-End Engineer / Web Designer",
     "status": "正社員",
     "experience": "2015.12 〜",
@@ -22,6 +22,34 @@
       },
       {
         "siteName": "aa",
+        "imagePath": [
+          "https://dummyimage.com/300x600/000/fff",
+          "https://dummyimage.com/300x600/000/fff",
+          "https://dummyimage.com/300x600/000/fff"
+        ],
+        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
+        "url": "s",
+        "charge": "JavaScript",
+        "experience": "2014.01 〜 2014.07",
+        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
+        "link": "#"
+      },
+      {
+        "siteName": "fff",
+        "imagePath": [
+          "https://dummyimage.com/300x600/000/fff",
+          "https://dummyimage.com/300x600/000/fff",
+          "https://dummyimage.com/300x600/000/fff"
+        ],
+        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
+        "url": "s",
+        "charge": "JavaScript",
+        "experience": "2014.01 〜 2014.07",
+        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
+        "link": "#"
+      },
+      {
+        "siteName": "fafda",
         "imagePath": [
           "https://dummyimage.com/300x600/000/fff",
           "https://dummyimage.com/300x600/000/fff",
@@ -95,7 +123,7 @@
     "status": "正社員",
     "experience": "2008.09 〜 2010.03",
     "description": "デザイン/HTMLコーディング/Flashと一通りのWeb制作を担当しました",
-   "projects": [
+    "projects": [
       {
         "siteName": "ddd",
         "imagePath": [

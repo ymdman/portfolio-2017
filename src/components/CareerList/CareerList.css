@@ -12,4 +12,18 @@
 
 .career-list__project {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+
+  & > li {
+    width: calc(30% - 15px);
+    margin-left: 15px;
+  }
+}
+
+.project-image {
+  & > img {
+    max-width: 100%;
+  }
 }
