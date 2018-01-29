@@ -44,6 +44,7 @@ class App extends React.Component {
             </main>
             <GlobalFooter />
           </Sidebar>
+
         </div>
       </BrowserRouter>
     );

@@ -7,6 +7,7 @@ import Section from '../Section/Section';
 import CareerList from '../CareerList/CareerList';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loading from '../Loading/Loading';
+import Modal from '../Modal/Modal';
 
 class ContentCareer extends React.Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ class ContentCareer extends React.Component {
           {loading}
           {careerList}
           {errorMessage}
+          <Modal />
         </div>
       </Section>
     );

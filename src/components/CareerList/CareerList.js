@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CareerDetail from '../CareerDetail/CareerDetail';
 
 class CareerList extends React.Component {
   constructor() {
@@ -9,8 +8,8 @@ class CareerList extends React.Component {
     this.showModal = this.showModal.bind(this);
   }
 
-  showModal() {
-    console.log(this);
+  showModal(projects) {
+    console.log(this, projects);
   }
 
   render() {
@@ -43,7 +42,6 @@ class CareerList extends React.Component {
                           <img src={projects.imagePath} alt={projects.siteName} />
                         </div>
                       </span>
-                      <CareerDetail projects={projects} />
                     </li>
                   ))
                 }
