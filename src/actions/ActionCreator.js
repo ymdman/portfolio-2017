@@ -51,8 +51,16 @@ const fetchPost = () => (
   }
 );
 
+const showModal = modalContent => (
+  {
+    type: ActionTypes.SHOW_MODAL,
+    modalContent,
+  }
+);
+
 export default {
   changeDrawerMenu,
   getWindowHeight,
   fetchPost,
+  showModal,
 };

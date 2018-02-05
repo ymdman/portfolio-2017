@@ -7,6 +7,8 @@ const initialState = {
   postSucces: false,
   postFailure: false,
   careerData: [],
+  showModal: false,
+  modalContent: {},
 };
 
 const reducer = (state = initialState, action) => {
@@ -42,6 +44,12 @@ const reducer = (state = initialState, action) => {
         postSucces: false,
         postFailure: true,
         careerData: action.careerData,
+      });
+
+    case ActionTypes.SHOW_MODAL:
+      return Object.assign({}, state, {
+        showModal: !state.showModal,
+        modalContent: action.modalContent,
       });
 
     default:
