@@ -34,7 +34,6 @@ class CareerList extends React.Component {
                         <span
                           onClick={() => {
                             this.props.actions.showModal(projects);
-                            console.log(this.props.currentState);
                           }}
                           role="button"
                           tabIndex="0"
