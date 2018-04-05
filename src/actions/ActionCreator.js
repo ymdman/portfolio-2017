@@ -39,7 +39,7 @@ const fetchPost = () => (
     dispatch(postRequest());
 
     request
-      .get('./data/career.json')
+      .get('./data/_career.json')
       .set('Content-Type', 'application/json')
       .end((err, res) => {
         if (err) {

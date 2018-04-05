@@ -40,7 +40,7 @@ class CareerList extends React.Component {
                         >
                           <h4 className="project-title">{projects.siteName}</h4>
                           <div className="project-image">
-                            <img src={projects.imagePath} alt={projects.siteName} />
+                            <img src={projects.imagePath[0]} alt={projects.siteName} />
                           </div>
                         </span>
                       </li>
