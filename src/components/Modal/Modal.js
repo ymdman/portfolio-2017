@@ -7,43 +7,37 @@ class Modal extends React.Component {
   constructor() {
     super();
 
-    console.log(this);
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    if (this.props.currentState.showModal) {
+      return { display: 'table' };
+    }
+
+    return { display: 'none' };
   }
 
   render() {
-    const toggleModal = () => {
-      if (this.props.currentState.showModal) {
-        return { display: 'table' };
-      }
-
-      return { display: 'none' };
-    };
-
     return (
-      <div className="modal" style={toggleModal()}>
+      <div className="modal" style={this.toggleModal()}>
         <div className="modal__inner">
-          <p>{this.props.currentState.modalContent.siteName}</p>
+          <h2>{this.props.currentState.modalContent.siteName}</h2>
+          <p>{this.props.currentState.modalContent.description}</p>
           <div
             onClick={() => {
               this.props.actions.showModal({});
-              toggleModal();
+              this.toggleModal();
             }}
             role="button"
             tabIndex="0"
+            className="modal__close-btn"
           >close</div>
         </div>
       </div>
     );
   }
 }
-
-// const Modal = props => (
-//   <div className="modal">
-//     <div className="modal__inner">
-//       <p>{props.currentState.modalContent.siteName}</p>
-//     </div>
-//   </div>
-// );
 
 Modal.propTypes = {
   actions: React.PropTypes.shape({
