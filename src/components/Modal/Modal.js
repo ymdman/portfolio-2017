@@ -24,6 +24,24 @@ class Modal extends React.Component {
         <div className="modal__inner">
           <h2>{this.props.currentState.modalContent.siteName}</h2>
           <p>{this.props.currentState.modalContent.description}</p>
+          <ul>
+            {
+              console.log(this.props.currentState.modalContent.imagePath[0])
+              // this.props.currentState.modalContent.projects.imagePath.map(hoge => (
+              //   console.log(hoge)
+              // ))
+            }
+          </ul>
+          <dl>
+            <dt>Site / サイト</dt>
+            <dd>{this.props.currentState.modalContent.siteName}</dd>
+            <dt>Charge / 担当</dt>
+            <dd>{this.props.currentState.modalContent.charge}</dd>
+            <dt>Experience / 期間</dt>
+            <dd>{this.props.currentState.modalContent.experience}</dd>
+            <dt>Develop / 開発環境</dt>
+            <dd>{this.props.currentState.modalContent.develop}</dd>
+          </dl>
           <div
             onClick={() => {
               this.props.actions.showModal({});

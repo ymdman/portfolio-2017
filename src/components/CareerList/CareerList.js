@@ -29,18 +29,18 @@ class CareerList extends React.Component {
                 <p className="career-list__description">{career.description}</p>
                 <ul className="career-list__project">
                   {
-                    career.projects.map(projects => (
-                      <li key={projects.siteName}>
+                    career.projects.map(project => (
+                      <li key={project.siteName}>
                         <span
                           onClick={() => {
-                            this.props.actions.showModal(projects);
+                            this.props.actions.showModal(project);
                           }}
                           role="button"
                           tabIndex="0"
                         >
-                          <h4 className="project-title">{projects.siteName}</h4>
+                          <h4 className="project-title">{project.siteName}</h4>
                           <div className="project-image">
-                            <img src={projects.imagePath[0]} alt={projects.siteName} />
+                            <img src={project.imagePath[0]} alt={project.siteName} />
                           </div>
                         </span>
                       </li>

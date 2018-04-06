@@ -8,7 +8,16 @@ const initialState = {
   postFailure: false,
   careerData: [],
   showModal: false,
-  modalContent: {},
+  modalContent: {
+    siteName: '',
+    imagePath: [],
+    description: '',
+    url: '',
+    charge: '',
+    experience: '',
+    develop: '',
+    link: '',
+  },
 };
 
 const reducer = (state = initialState, action) => {
