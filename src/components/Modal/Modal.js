@@ -26,7 +26,6 @@ class Modal extends React.Component {
           <p>{this.props.currentState.modalContent.description}</p>
           <ul>
             {
-              console.log(this.props.currentState.modalContent.imagePath[0])
               // this.props.currentState.modalContent.projects.imagePath.map(hoge => (
               //   console.log(hoge)
               // ))
