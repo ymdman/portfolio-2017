@@ -13,6 +13,11 @@ class CareerList extends React.Component {
   render() {
     return (
       <div>
+        <p>
+          上から順に直近の職歴と携わったサイトの一部を掲載しております。<br />
+          サイトによってはリニューアルしているものもあり、画像と相違している場合があります(画像は私が携わっていた時のものです)。<br />
+          また、公開終了しているサイトとWeb以外の制作物にはリンクボタンが付いておりません。
+        </p>
         <ul className="career-list">
           {
             this.props.currentState.careerData.map(career => (
