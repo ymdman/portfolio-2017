@@ -10,8 +10,8 @@
     "react/jsx-filename-extension": 0,
     "no-console": 0,
     "import/no-extraneous-dependencies": ["error", {
-      devDependencies: ["**/*.js"],
-      peerDependencies: false
+      "devDependencies": ["**/*.js"],
+      "peerDependencies": false
     }],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
