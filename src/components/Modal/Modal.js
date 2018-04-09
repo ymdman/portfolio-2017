@@ -24,12 +24,16 @@ class Modal extends React.Component {
         <div className="modal__inner">
           <h2>{this.props.currentState.modalContent.siteName}</h2>
           <p>{this.props.currentState.modalContent.description}</p>
-          <ul>
-            {
-              // this.props.currentState.modalContent.projects.imagePath.map(hoge => (
-              //   console.log(hoge)
-              // ))
-            }
+          <ul className="modal-image-list">
+            {this.props.currentState.modalContent.image.map(image => (
+              <li key={image.key}>
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className="modal-image-list__image"
+                />
+              </li>
+            ))}
           </ul>
           <dl>
             <dt>Site / サイト</dt>
@@ -41,15 +45,35 @@ class Modal extends React.Component {
             <dt>Develop / 開発環境</dt>
             <dd>{this.props.currentState.modalContent.develop}</dd>
           </dl>
+
+          {(() => {
+            if (!this.props.currentState.modalContent.url) {
+              return false;
+            }
+
+            return (
+              <p>
+                <a
+                  href={this.props.currentState.modalContent.url}
+                  target="_blank"
+                >
+                  Visit This Site
+                </a>
+              </p>
+            );
+          })()}
+
           <div
             onClick={() => {
-              this.props.actions.showModal({});
+              this.props.actions.showModal({ image: [] });
               this.toggleModal();
             }}
             role="button"
             tabIndex="0"
             className="modal__close-btn"
-          >close</div>
+          >
+            close
+          </div>
         </div>
       </div>
     );
@@ -71,15 +95,10 @@ Modal.defaultProps = {
   currentState: {},
 };
 
-const mapStateToProps = state => (
-  { currentState: state.Index }
-);
+const mapStateToProps = state => ({ currentState: state.Index });
 
-const mapDispatchToProps = dispatch => (
-  { actions: bindActionCreators(ActionCreator, dispatch) }
-);
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(ActionCreator, dispatch),
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
