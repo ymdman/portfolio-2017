@@ -55,15 +55,10 @@ ContentCareer.defaultProps = {
   currentState: {},
 };
 
-const mapStateToProps = state => (
-  { currentState: state.Index }
-);
+const mapStateToProps = state => ({ currentState: state.Index });
 
-const mapDispatchToProps = dispatch => (
-  { actions: bindActionCreators(ActionCreator, dispatch) }
-);
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(ActionCreator, dispatch),
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ContentCareer);
+export default connect(mapStateToProps, mapDispatchToProps)(ContentCareer);

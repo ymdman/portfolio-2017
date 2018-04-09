@@ -92,8 +92,10 @@ const options = {
 
 const SkillGraph = () => (
   <div>
-    <p>JavaScript(ES2015)についてはオブジェクト指向で書け、ライブラリはReact,Vue.js,jQueryを使用できます。<br />
-    HTMLについてはセマンティックなコーディングが出来ます。</p>
+    <p>
+      JavaScript(ES2015)についてはオブジェクト指向で書け、ライブラリはReact,Vue.js,jQueryを使用できます。<br />
+      HTMLについてはセマンティックなコーディングが出来ます。
+    </p>
     <div className="skill-graph-list">
       <ul className="skill-graph-list__inner">
         <li>
@@ -104,12 +106,22 @@ const SkillGraph = () => (
         <li>
           <h3>Node.js</h3>
           <p>40%</p>
-          <Doughnut data={dataNode} options={options} width={150} height={150} />
+          <Doughnut
+            data={dataNode}
+            options={options}
+            width={150}
+            height={150}
+          />
         </li>
         <li>
           <h3>HTML</h3>
           <p>80%</p>
-          <Doughnut data={dataHTML} options={options} width={150} height={150} />
+          <Doughnut
+            data={dataHTML}
+            options={options}
+            width={150}
+            height={150}
+          />
         </li>
         <li>
           <h3>CSS</h3>
@@ -124,12 +136,22 @@ const SkillGraph = () => (
         <li>
           <h3>Photoshop</h3>
           <p>60%</p>
-          <Doughnut data={dataPhotoshop} options={options} width={150} height={150} />
+          <Doughnut
+            data={dataPhotoshop}
+            options={options}
+            width={150}
+            height={150}
+          />
         </li>
         <li>
           <h3>Illustrator</h3>
           <p>60%</p>
-          <Doughnut data={dataIllustrator} options={options} width={150} height={150} />
+          <Doughnut
+            data={dataIllustrator}
+            options={options}
+            width={150}
+            height={150}
+          />
         </li>
       </ul>
     </div>

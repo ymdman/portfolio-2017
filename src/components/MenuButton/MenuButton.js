@@ -3,7 +3,9 @@ import React from 'react';
 const MenuButton = props => (
   <div
     className="menu-button"
-    onClick={() => { props.actions.changeDrawerMenu(); }}
+    onClick={() => {
+      props.actions.changeDrawerMenu();
+    }}
     tabIndex="0"
     role="button"
   >

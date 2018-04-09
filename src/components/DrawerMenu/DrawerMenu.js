@@ -6,13 +6,34 @@ const DrawerMenu = props => (
     <h2 className="drawer-menu__title">MENU</h2>
     <ul className="drawer-menu__list">
       <li>
-        <Link to="/" onClick={() => { props.actions.changeDrawerMenu(); }}>About</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            props.actions.changeDrawerMenu();
+          }}
+        >
+          About
+        </Link>
       </li>
       <li>
-        <Link to="/skill" onClick={() => { props.actions.changeDrawerMenu(); }}>Skill</Link>
+        <Link
+          to="/skill"
+          onClick={() => {
+            props.actions.changeDrawerMenu();
+          }}
+        >
+          Skill
+        </Link>
       </li>
       <li>
-        <Link to="/career" onClick={() => { props.actions.changeDrawerMenu(); }}>Career</Link>
+        <Link
+          to="/career"
+          onClick={() => {
+            props.actions.changeDrawerMenu();
+          }}
+        >
+          Career
+        </Link>
       </li>
     </ul>
   </nav>

@@ -37,14 +37,17 @@ class App extends React.Component {
             <GlobalHeader {...props} />
             <main>
               <Switch>
-                <Route exact path="/" render={() => <ContentAbout {...props} />} />
+                <Route
+                  exact
+                  path="/"
+                  render={() => <ContentAbout {...props} />}
+                />
                 <Route path="/skill" component={ContentSkill} />
                 <Route path="/career" component={ContentCareer} />
               </Switch>
             </main>
             <GlobalFooter />
           </Sidebar>
-
         </div>
       </BrowserRouter>
     );
@@ -65,15 +68,10 @@ App.defaultProps = {
   currentState: {},
 };
 
-const mapStateToProps = state => (
-  { currentState: state.Index }
-);
+const mapStateToProps = state => ({ currentState: state.Index });
 
-const mapDispatchToProps = dispatch => (
-  { actions: bindActionCreators(ActionCreator, dispatch) }
-);
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(ActionCreator, dispatch),
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

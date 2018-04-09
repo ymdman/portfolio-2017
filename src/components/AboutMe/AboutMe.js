@@ -15,12 +15,15 @@ const AboutMe = () => (
       </p>
       <ul className="about-me-social-list">
         <li>
-          <a href="https://github.com/ymdman" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/ymdman"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MarkGithubIcon width="32" height="32" />
           </a>
         </li>
       </ul>
-
     </div>
   </div>
 );

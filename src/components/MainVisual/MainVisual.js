@@ -10,9 +10,13 @@ export default class MainVisual extends React.Component {
   componentDidMount() {
     this.getWindowHeight();
 
-    window.addEventListener('resize', () => {
-      this.getWindowHeight();
-    }, false);
+    window.addEventListener(
+      'resize',
+      () => {
+        this.getWindowHeight();
+      },
+      false,
+    );
   }
 
   getWindowHeight() {
@@ -21,7 +25,10 @@ export default class MainVisual extends React.Component {
 
   render() {
     return (
-      <div className="main-visual" style={{ height: this.props.currentState.windowHeight }}>
+      <div
+        className="main-visual"
+        style={{ height: this.props.currentState.windowHeight }}
+      >
         <div className="main-visual__inner">
           <h2 className="main-visual-title">Kazuhiro Yamada</h2>
           <p>Front End Engineer / Web Designer</p>

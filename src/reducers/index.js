@@ -10,7 +10,7 @@ const initialState = {
   showModal: false,
   modalContent: {
     siteName: '',
-    imagePath: [],
+    image: [],
     description: '',
     url: '',
     charge: '',
