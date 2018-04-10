@@ -23,32 +23,37 @@ class CareerList extends React.Component {
             <li key={career.key}>
               <h3 className="career-list__title">{career.companyName}</h3>
               <dl className="career-list__detail">
-                <dt>Job</dt>
+                <dt>職種</dt>
                 <dd>{career.job}</dd>
-                <dt>status</dt>
+                <dt>雇用形態</dt>
                 <dd>{career.status}</dd>
-                <dt>experience</dt>
+                <dt>期間</dt>
                 <dd>{career.experience}</dd>
               </dl>
               <p className="career-list__description">{career.description}</p>
               <ul className="career-list__project">
                 {career.projects.map(project => (
                   <li key={project.siteName}>
-                    <span
+                    <div
                       onClick={() => {
                         this.props.actions.showModal(project);
                       }}
                       role="button"
                       tabIndex="0"
+                      className="career-project"
                     >
-                      <h4 className="project-title">{project.siteName}</h4>
-                      <div className="project-image">
-                        <img
-                          src={project.image[0].url}
-                          alt={project.image[0].alt}
-                        />
+                      <h4 className="career-project__title">
+                        {project.siteName}
+                      </h4>
+                      <div className="career-project__image">
+                        <div className="career-project__image-inner">
+                          <img
+                            src={project.image[0].url}
+                            alt={project.image[0].alt}
+                          />
+                        </div>
                       </div>
-                    </span>
+                    </div>
                   </li>
                 ))}
               </ul>

@@ -24,6 +24,7 @@
   --fs-xxxx-large: 3.1rem;
   --fs-xxxxx-large: 3.4rem;
   --fs-xxxxxx-large: 3.7rem;
+  --fs-xxxxxxx-large: 4rem;
 
   /* Line Height */
   --lh-small: 1.4;
@@ -34,6 +35,7 @@
   --clr-base: #515151;
   --clr-thema: #ff0;
   --clr-link: #0366d6;
+  --clr-light-glay: #ccc;
 
   /* Media Queries */
   @custom-media --mq-sp (max-width: 639px);

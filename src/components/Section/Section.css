@@ -4,14 +4,13 @@
 
 .section {
   margin-top: 70px;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 .section__title {
   text-align: center;
-  font-weight: normal;
-  font-size: var(--fs-xxxx-large);
+  font-size: var(--fs-xxxxxxx-large);
 }
 
 .section__detail {

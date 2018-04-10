@@ -15,8 +15,7 @@ const initialState = {
     url: '',
     charge: '',
     experience: '',
-    develop: '',
-    link: '',
+    other: '',
   },
 };
 

@@ -42,8 +42,8 @@ class Modal extends React.Component {
             <dd>{this.props.currentState.modalContent.charge}</dd>
             <dt>Experience / 期間</dt>
             <dd>{this.props.currentState.modalContent.experience}</dd>
-            <dt>Develop / 開発環境</dt>
-            <dd>{this.props.currentState.modalContent.develop}</dd>
+            <dt>Other / その他</dt>
+            <dd>{this.props.currentState.modalContent.other}</dd>
           </dl>
 
           {(() => {
