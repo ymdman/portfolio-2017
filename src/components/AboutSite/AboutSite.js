@@ -7,7 +7,7 @@ const AboutSite = () => (
       Yamadaのポートフォリオサイトになります。<br />
       当サイトはReact+Reduxを使用しSPAで実装しております。<br />
       ソースは<a
-        href="https://github.com/ymdman/portfolio"
+        href="https://github.com/ymdman/portfolio-2018"
         target="_blank"
         rel="noopener noreferrer"
       >

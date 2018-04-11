@@ -1,12 +1,12 @@
 {
-  "name": "portfolio-2017",
+  "name": "portfolio-2018",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "kazuhiro Yamada",
+  "author": "Kazuhiro Yamada",
   "license": "ISC",
   "dependencies": {
     "react": "^15.4.2",
