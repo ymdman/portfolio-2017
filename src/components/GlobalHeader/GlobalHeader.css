@@ -5,8 +5,12 @@
 .global-header {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  height: 60px;
+  padding-right: 50px;
+  padding-left: 50px;
   box-sizing: border-box;
+  border-bottom: solid 1px var(--clr-light-glay);
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +19,7 @@
 }
 
 .global-header__logo {
-  color: #fff;
+  color: var(--clr-base);
   margin-right: auto;
   font-size: var(--fs-x-large);
 }

@@ -3,14 +3,15 @@
  */
 
 .section {
-  margin-top: 70px;
+  margin-top: 100px;
   padding-right: 15%;
   padding-left: 15%;
 }
 
 .section__title {
   text-align: center;
-  font-size: var(--fs-xxxxxxx-large);
+  font-size: var(--fs-xxxxxxxxxx-large);
+  font-weight: normal;
 }
 
 .section__detail {

@@ -35,7 +35,7 @@ class App extends React.Component {
             onSetOpen={this.onSetSidebarOpen}
           >
             <GlobalHeader {...props} />
-            <main>
+            <main className="main">
               <Switch>
                 <Route
                   exact

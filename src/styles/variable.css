@@ -25,8 +25,14 @@
   --fs-xxxxx-large: 3.4rem;
   --fs-xxxxxx-large: 3.7rem;
   --fs-xxxxxxx-large: 4rem;
+  --fs-xxxxxxxx-large: 4.3rem;
+  --fs-xxxxxxxxx-large: 4.6rem;
+  --fs-xxxxxxxxxx-large: 4.9rem;
+  --fs-xxxxxxxxxxx-large: 5.2rem;
 
   /* Line Height */
+  --lh-xx-small: 1;
+  --lh-x-small: 1.2;
   --lh-small: 1.4;
   --lh-base: 1.6;
   --lh-large: 1.8;

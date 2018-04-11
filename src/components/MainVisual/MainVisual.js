@@ -30,8 +30,10 @@ export default class MainVisual extends React.Component {
         style={{ height: this.props.currentState.windowHeight }}
       >
         <div className="main-visual__inner">
-          <h2 className="main-visual-title">Kazuhiro Yamada</h2>
-          <p>Front End Engineer / Web Designer</p>
+          <h2 className="main-visual-title-name">Kazuhiro Yamada</h2>
+          <p className="main-visual-title-job">
+            Front End Engineer / Web Designer
+          </p>
         </div>
       </div>
     );

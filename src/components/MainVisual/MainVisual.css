@@ -21,6 +21,11 @@
   color: #fff;
 }
 
-.main-visual-title {
-  font-size: var(--fs-xxxxxx-large);
+.main-visual-title-name {
+  font-size: var(--fs-xxxxxxxxxxx-large);
+  line-height: var(--lh-xx-small);
+}
+
+.main-visual-title-job {
+  font-size: var(--fs-xx-large);
 }
