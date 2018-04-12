@@ -18,8 +18,15 @@
   z-index: 1;
 }
 
-.global-header__logo {
+.global-header-logo {
   color: var(--clr-base);
   margin-right: auto;
-  font-size: var(--fs-x-large);
+}
+
+.global-header-logo__main {
+  font-size: var(--fs-xx-large);
+}
+
+.global-header-logo__sub {
+  font-size: var(--fs-large);
 }
