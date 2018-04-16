@@ -12,6 +12,16 @@ import ContentAbout from '../components/ContentAbout/ContentAbout';
 import ContentSkill from '../components/ContentSkill/ContentSkill';
 import ContentCareer from '../components/ContentCareer/ContentCareer';
 
+const sidebarStyles = {
+  sidebar: {
+    zIndex: 300,
+  },
+
+  overlay: {
+    zIndex: 200,
+  },
+};
+
 class App extends React.Component {
   constructor() {
     super();
@@ -33,6 +43,7 @@ class App extends React.Component {
             sidebar={<DrawerMenu {...props} />}
             open={props.currentState.drawerMenu}
             onSetOpen={this.onSetSidebarOpen}
+            styles={sidebarStyles}
           >
             <GlobalHeader {...props} />
             <main className="main">
