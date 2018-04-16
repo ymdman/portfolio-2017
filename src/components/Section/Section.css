@@ -10,11 +10,11 @@
 
 .section__title {
   text-align: center;
-  font-size: var(--fs-xxxxxxxxxx-large);
+  font-size: var(--fs-xxxxxxxxx-large);
   font-weight: normal;
 }
 
 .section__detail {
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
 }
