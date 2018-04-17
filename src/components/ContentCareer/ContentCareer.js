@@ -31,6 +31,11 @@ class ContentCareer extends React.Component {
     return (
       <Section title={'Career'}>
         <div>
+          <p>
+            上から順に直近の職歴と携わったサイトの一部を掲載しております。<br />
+            サイトによってはリニューアルしているものもあり、画像と相違している場合があります(画像は私が携わっていた時のものです)。<br />
+            また、公開終了しているサイトとWeb以外の制作物にはリンクボタンが付いておりません。
+          </p>
           {loading}
           {careerList}
           {errorMessage}
