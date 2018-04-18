@@ -28,9 +28,9 @@ class ContentCareer extends React.Component {
     }
 
     return (
-      <section className="section">
-        <h2 className="section__title">About</h2>
-        <div className="section__detail">
+      <section className="l-section">
+        <h2 className="l-section__title">Works</h2>
+        <div className="l-section__detail">
           <p>
             上から順に直近の職歴と携わったサイトの一部を掲載しております。<br />
             サイトによってはリニューアルしているものもあり、画像と相違している場合があります(画像は私が携わっていた時のものです)。<br />

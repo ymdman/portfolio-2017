@@ -3,9 +3,9 @@ import SkillGraph from '../SkillGraph/SkillGraph';
 
 const ContentSkill = () => (
   <div>
-    <section className="section">
-      <h2 className="section__title">About</h2>
-      <div className="section__detail">
+    <section className="l-section">
+      <h2 className="l-section__title">Skill</h2>
+      <div className="l-section__detail">
         <p>自己評価ですがスキルについて説明させて頂きます。</p>
         <SkillGraph />
       </div>

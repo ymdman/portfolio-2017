@@ -3,21 +3,11 @@
  */
 
 .profile {
-  margin-top: 100px;
-}
-
-.profile__title {
-  font-size: var(--fs-xxxxx-large);
-  font-weight: normal;
-}
-
-.profile__content {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
-.profile-image {
+.profile__image {
   border-radius: 50%;
   width: 180px;
   height: 180px;
@@ -30,25 +20,25 @@
   }
 }
 
-.profile-detail {
+.profile__detail {
   text-align: left;
   width: 50%;
 }
 
-.profile-detail__name {
+.profile-name {
   font-size: var(--fs-large);
   line-height: var(--lh-small);
 }
 
-.profile-detail__job {
+.profile-job {
   font-weight: normal;
 }
 
-.profile-detail__introduction {
+.profile-introduction {
   margin-top: 10px;
 }
 
-.profile-detail__social-list {
+.profile-social-list {
   list-style: none;
   margin-top: 10px;
 

@@ -38,7 +38,7 @@ class App extends React.Component {
 
     return (
       <BrowserRouter>
-        <div className="wrapper">
+        <div className="l-wrapper">
           <Sidebar
             sidebar={<DrawerMenu {...props} />}
             open={props.currentState.drawerMenu}
@@ -46,7 +46,7 @@ class App extends React.Component {
             styles={sidebarStyles}
           >
             <GlobalHeader {...props} />
-            <main className="main">
+            <main className="l-main">
               <Switch>
                 <Route
                   exact

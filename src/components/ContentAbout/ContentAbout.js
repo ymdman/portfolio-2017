@@ -6,9 +6,9 @@ import Profile from '../Profile/Profile';
 const ContentAbout = props => (
   <div>
     <MainVisual {...props} />
-    <section className="section">
-      <h2 className="section__title">About</h2>
-      <div className="section__detail">
+    <section className="l-section">
+      <h2 className="l-section__title">About</h2>
+      <div className="l-section__detail">
         <p>
           フロントエンド・エンジニアKazuhiro
           Yamadaのポートフォリオサイトになります。<br />
