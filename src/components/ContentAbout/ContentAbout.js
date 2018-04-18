@@ -1,14 +1,14 @@
 import React from 'react';
 import MainVisual from '../MainVisual/MainVisual';
-import Section from '../Section/Section';
 import AboutSite from '../AboutSite/AboutSite';
 import Profile from '../Profile/Profile';
 
 const ContentAbout = props => (
   <div>
     <MainVisual {...props} />
-    <Section title={'About Site'}>
-      <div>
+    <section className="section">
+      <h2 className="section__title">About</h2>
+      <div className="section__detail">
         <p>
           フロントエンド・エンジニアKazuhiro
           Yamadaのポートフォリオサイトになります。<br />
@@ -24,7 +24,7 @@ const ContentAbout = props => (
         <AboutSite />
         <Profile />
       </div>
-    </Section>
+    </section>
   </div>
 );
 

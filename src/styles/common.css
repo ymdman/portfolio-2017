@@ -1,6 +1,10 @@
 /**
- * Section
+ * Layout
  */
+
+.main {
+  padding-top: 60px;
+}
 
 .section {
   margin-top: 100px;
@@ -17,4 +21,13 @@
 .section__detail {
   margin-top: 20px;
   text-align: center;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.content__title {
+  font-size: var(--fs-xxxxx-large);
+  font-weight: normal;
 }

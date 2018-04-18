@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ActionCreator from '../../actions/ActionCreator';
 
-import Section from '../Section/Section';
 import CareerList from '../CareerList/CareerList';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loading from '../Loading/Loading';
@@ -29,8 +28,9 @@ class ContentCareer extends React.Component {
     }
 
     return (
-      <Section title={'Career'}>
-        <div>
+      <section className="section">
+        <h2 className="section__title">About</h2>
+        <div className="section__detail">
           <p>
             上から順に直近の職歴と携わったサイトの一部を掲載しております。<br />
             サイトによってはリニューアルしているものもあり、画像と相違している場合があります(画像は私が携わっていた時のものです)。<br />
@@ -41,7 +41,7 @@ class ContentCareer extends React.Component {
           {errorMessage}
           <Modal />
         </div>
-      </Section>
+      </section>
     );
   }
 }
