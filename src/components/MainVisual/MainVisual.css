@@ -22,10 +22,10 @@
 }
 
 .main-visual-title-name {
-  font-size: var(--fs-xxxxxxxxxxxxxx-large);
+  font-size: var(--fs-xxxxx-large);
   line-height: var(--lh-xx-small);
 }
 
 .main-visual-title-job {
-  font-size: var(--fs-xx-large);
+  font-size: var(--fs-x-large);
 }

@@ -7,14 +7,14 @@
 }
 
 .l-section {
-  margin-top: 100px;
+  margin-top: 80px;
   padding-right: 15%;
   padding-left: 15%;
 }
 
 .l-section__title {
   text-align: center;
-  font-size: var(--fs-xxxxxxxxx-large);
+  font-size: var(--fs-xxx-large);
   font-weight: normal;
 
   & + .l-section__detail {
@@ -24,11 +24,11 @@
 }
 
 .l-content {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .l-content__title {
-  font-size: var(--fs-xxxxx-large);
+  font-size: var(--fs-xx-large);
   font-weight: normal;
 
   & + .l-content__detail {

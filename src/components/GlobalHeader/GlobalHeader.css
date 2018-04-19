@@ -24,9 +24,9 @@
 }
 
 .global-header-logo__main {
-  font-size: var(--fs-xx-large);
+  font-size: var(--fs-x-large);
 }
 
 .global-header-logo__sub {
-  font-size: var(--fs-large);
+  font-size: var(--fs-middle);
 }

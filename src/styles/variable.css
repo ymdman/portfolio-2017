@@ -17,21 +17,12 @@
   --fs-x-small: 1rem;
   --fs-small: 1.3rem;
   --fs-middle: 1.6rem;
-  --fs-large: 1.9rem;
-  --fs-x-large: 2.2rem;
-  --fs-xx-large: 2.5rem;
-  --fs-xxx-large: 2.8rem;
-  --fs-xxxx-large: 3.1rem;
-  --fs-xxxxx-large: 3.4rem;
-  --fs-xxxxxx-large: 3.7rem;
-  --fs-xxxxxxx-large: 4rem;
-  --fs-xxxxxxxx-large: 4.3rem;
-  --fs-xxxxxxxxx-large: 4.6rem;
-  --fs-xxxxxxxxxx-large: 4.9rem;
-  --fs-xxxxxxxxxxx-large: 5.2rem;
-  --fs-xxxxxxxxxxxx-large: 5.5rem;
-  --fs-xxxxxxxxxxxxx-large: 5.8rem;
-  --fs-xxxxxxxxxxxxxx-large: 6.1rem;
+  --fs-large: 2rem;
+  --fs-x-large: 2.6rem;
+  --fs-xx-large: 3.6rem;
+  --fs-xxx-large: 4.6rem;
+  --fs-xxxx-large: 5.6rem;
+  --fs-xxxxx-large: 6.6rem;
 
   /* Line Height */
   --lh-xx-small: 1;
