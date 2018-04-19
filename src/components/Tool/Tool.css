@@ -1,0 +1,25 @@
+/**
+ * Tool
+ */
+
+.tool__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+  margin-left: -10px;
+
+  & > li {
+    background-color: var(--clr-base);
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.tool__text {
+  margin-top: 20px;
+}

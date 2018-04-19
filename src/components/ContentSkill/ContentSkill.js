@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillGraph from '../SkillGraph/SkillGraph';
+import Tool from '../Tool/Tool';
 
 const ContentSkill = () => (
   <div>
@@ -8,6 +9,7 @@ const ContentSkill = () => (
       <div className="l-section__detail">
         <p>自己評価ですがスキルについて説明させて頂きます。</p>
         <SkillGraph />
+        <Tool />
       </div>
     </section>
   </div>

@@ -51,21 +51,11 @@ const dataPHP = {
   ],
 };
 
-const dataPhotoshop = {
+const dataDesign = {
   datasets: [
     {
       data: [60, 40],
-      backgroundColor: ['#00c8ff', '#f5f5f5'],
-      borderWidth: 0,
-    },
-  ],
-};
-
-const dataIllustrator = {
-  datasets: [
-    {
-      data: [40, 60],
-      backgroundColor: ['#fd8c1f', '#f5f5f5'],
+      backgroundColor: ['#32c6f5', '#f5f5f5'],
       borderWidth: 0,
     },
   ],
@@ -94,15 +84,28 @@ const SkillGraph = () => (
   <div className="l-content">
     <h3 className="l-content__title">Programming + Markup + Design</h3>
     <div className="l-content__detail">
-      <p>
-        JavaScript(ES2015)についてはオブジェクト指向で書け、ライブラリはReact,Vue.js,jQueryを使用できます。<br />
-        HTMLについてはセマンティックなコーディングが出来ます。
-      </p>
-      <div className="skill-graph-list">
-        <ul className="skill-graph-list__inner">
+      <dl className="fuga">
+        <dt>
+          <dfn>JavaScript(ES2015)</dfn>
+        </dt>
+        <dd>
+          オブジェクト指向で書けライブラリはReact / Vue.js /
+          jQueryを使用できます。<br />モジュール管理はWebpack / Browserify<br />タスクランナーはGulp
+          / Gruntの使用経験があります。
+        </dd>
+        <dt>
+          <dfn>CSS</dfn>
+        </dt>
+        <dd>
+          設計についてはFLOCSS / BEM / SMACSS、<br />altCSSについてはSCSS /
+          Stylus / PostCSSを使用できます。
+        </dd>
+      </dl>
+      <div className="skill-graph">
+        <ul className="skill-graph__list">
           <li>
             <h3>JavaScript</h3>
-            <p>80%</p>
+            <p className="skill-graph-value">80%</p>
             <Doughnut
               data={dataJS}
               options={options}
@@ -111,18 +114,8 @@ const SkillGraph = () => (
             />
           </li>
           <li>
-            <h3>Node.js</h3>
-            <p>40%</p>
-            <Doughnut
-              data={dataNode}
-              options={options}
-              width={150}
-              height={150}
-            />
-          </li>
-          <li>
             <h3>HTML</h3>
-            <p>80%</p>
+            <p className="skill-graph-value">80%</p>
             <Doughnut
               data={dataHTML}
               options={options}
@@ -132,7 +125,7 @@ const SkillGraph = () => (
           </li>
           <li>
             <h3>CSS</h3>
-            <p>80%</p>
+            <p className="skill-graph-value">80%</p>
             <Doughnut
               data={dataCSS}
               options={options}
@@ -141,8 +134,18 @@ const SkillGraph = () => (
             />
           </li>
           <li>
+            <h3>Node.js</h3>
+            <p className="skill-graph-value">40%</p>
+            <Doughnut
+              data={dataNode}
+              options={options}
+              width={150}
+              height={150}
+            />
+          </li>
+          <li>
             <h3>PHP</h3>
-            <p>80%</p>
+            <p className="skill-graph-value">20%</p>
             <Doughnut
               data={dataPHP}
               options={options}
@@ -151,20 +154,10 @@ const SkillGraph = () => (
             />
           </li>
           <li>
-            <h3>Photoshop</h3>
-            <p>60%</p>
+            <h3>Design</h3>
+            <p className="skill-graph-value">60%</p>
             <Doughnut
-              data={dataPhotoshop}
-              options={options}
-              width={150}
-              height={150}
-            />
-          </li>
-          <li>
-            <h3>Illustrator</h3>
-            <p>60%</p>
-            <Doughnut
-              data={dataIllustrator}
+              data={dataDesign}
               options={options}
               width={150}
               height={150}
