@@ -48,3 +48,20 @@
     }
   }
 }
+
+@media (--mq-sp) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__image {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .profile__detail {
+    text-align: center;
+    margin-top: 10px;
+    width: auto;
+  }
+}

@@ -3,14 +3,10 @@
  */
 
 .main-visual {
-  position: relative;
   background-image: url("/images/img-main-visual.jpg");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0;
-  overflow: hidden;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,4 +24,14 @@
 
 .main-visual-title-job {
   font-size: var(--fs-x-large);
+}
+
+@media (--mq-sp) {
+  .main-visual-title-name {
+    font-size: var(--fs-xx-large);
+  }
+
+  .main-visual-title-job {
+    font-size: var(--fs-middle);
+  }
 }

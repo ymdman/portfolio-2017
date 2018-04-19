@@ -11,8 +11,8 @@
 
 .drawer-menu__title {
   font-size: var(--fs-large);
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 15px;
+  margin-left: 30px;
 }
 
 .drawer-menu__list {
@@ -23,7 +23,7 @@
       text-decoration: none;
       color: var(--clr-base);
       display: block;
-      padding: 10px 20px;
+      padding: 10px 30px;
 
       &:hover {
         background-color: #ccc;
@@ -48,4 +48,26 @@
 .drawer-menu-exit.drawer-menu-exit-active {
   left: -300px;
   transition: left 300ms ease-in;
+}
+
+@media (--mq-sp) {
+  .drawer-menu {
+    width: 200px;
+  }
+
+  .drawer-menu__title {
+    margin-left: 20px;
+  }
+
+  .drawer-menu__list {
+    & > li {
+      & > a {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .drawer-menu-exit.drawer-menu-exit-active {
+    left: -200px;
+  }
 }

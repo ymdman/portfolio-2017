@@ -30,3 +30,10 @@
 .global-header-logo__sub {
   font-size: var(--fs-middle);
 }
+
+@media (--mq-sp) {
+  .global-header {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

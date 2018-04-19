@@ -30,9 +30,6 @@ const CareerList = props => (
                     tabIndex="0"
                     className="career-project"
                   >
-                    <h4 className="career-project__title">
-                      {project.siteName}
-                    </h4>
                     <div className="career-project__image">
                       <div className="career-project__image-inner">
                         <img
@@ -41,6 +38,9 @@ const CareerList = props => (
                         />
                       </div>
                     </div>
+                    <h4 className="career-project__title">
+                      {project.siteName}
+                    </h4>
                   </div>
                 </li>
               ))}

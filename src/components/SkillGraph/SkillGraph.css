@@ -35,3 +35,14 @@
     margin-top: 10px;
   }
 }
+
+@media (--mq-sp) {
+  .skill-graph__list {
+    margin-left: -10px;
+
+    & > li {
+      width: calc(50% - 10px);
+      margin-left: 10px;
+    }
+  }
+}

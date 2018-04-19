@@ -11,3 +11,9 @@
 .global-footer__copyright {
   text-align: center;
 }
+
+@media (--mq-sp) {
+  .global-footer {
+    margin-top: 20px;
+  }
+}

@@ -28,22 +28,24 @@
 .career-list__detail {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: left;
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
+  text-align: left;
+  width: 260px;
 
   & > dt {
+    width: 90px;
+
     &::after {
-      content: ':';
+      content: ":";
       margin-right: 5px;
       margin-left: 5px;
     }
   }
 
-  & > dd + dt {
-    margin-left: 40px;
+  & > dd {
+    width: 160px;
   }
 }
 
@@ -56,11 +58,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
   margin-left: -20px;
 
   & > li {
     width: calc(33.3% - 20px);
+    margin-top: 20px;
     margin-left: 20px;
   }
 }
@@ -94,5 +96,52 @@
 
   & > img {
     max-width: 100%;
+  }
+}
+
+@media (--mq-sp) {
+  .career-list {
+    & > li {
+      &::before {
+        border-top: solid 2px var(--clr-light-glay);
+        width: 80px;
+        padding-top: 10px;
+      }
+    }
+
+    & > li + li {
+      margin-top: 20px;
+    }
+  }
+
+  .career-list__title {
+    font-size: var(--fs-x-large);
+  }
+
+  .career-list__project {
+    margin-left: -10px;
+
+    & > li {
+      width: calc(50% - 10px);
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .career-list__detail {
+    width: 80%;
+
+    & > dt {
+      width: 35%;
+    }
+
+    & > dd {
+      width: 65%;
+    }
+  }
+
+  .career-list__detail,
+  .career-list__description {
+    margin-top: 10px;
   }
 }
