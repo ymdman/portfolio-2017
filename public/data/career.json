@@ -1,234 +1,73 @@
 [
   {
-    "companyName": "株式会社hogsse",
-    "job": "Front-End Engineer / Web Designer",
-    "status": "正社員",
-    "experience": "2015.12 〜",
-    "description": "色々やってます色々やってます色々やってます",
+    "companyName": "companyName",
+    "job": "job",
+    "status": "status",
+    "experience": "experience",
+    "description": "description",
     "projects": [
       {
-        "siteName": "TABROOM",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
+        "siteName": "siteName",
+        "image": [
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
+        "description": "descriptiondescriptiondescription",
+        "url": "url",
+        "charge": "charge",
+        "experience": "experience",
+        "other": "other"
       },
+
       {
-        "siteName": "aa",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
+        "siteName": "siteName",
+        "image": [
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "s",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      },
-      {
-        "siteName": "fff",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "s",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      },
-      {
-        "siteName": "fafda",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "s",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
+        "description": "descriptiondescriptiondescription",
+        "url": "url",
+        "charge": "charge",
+        "experience": "experience",
+        "other": "other"
       }
     ],
-    "key": 1
+    "key": "key-1"
   },
+
   {
-    "companyName": "株式会社fuga",
-    "job": "Front-End Engineer",
-    "status": "正社員",
-    "experience": "2013.08 〜 2015.11",
-    "description": "JavaScriptコーディングをメインに大規模サイトのリニューアルや運用を担当しております。",
-   "projects": [
-      {
-        "siteName": "bb",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      },
-      {
-        "siteName": "cc",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      }
-    ],
-    "key": 2
-  },
-  {
-    "companyName": "piyo株式会社",
-    "job": "Markup Engineer",
-    "status": "正社員",
-    "experience": "2010.09 〜 2012.10",
-    "description": "大規模サイトの運用や新規構築などをマークアップエンジニアとして担当させて頂きました。",
-    "projects": [
-      {"siteName": "TABROOM", "imagePath": "https://dummyimage.com/300x600/000/fff", "url": "aaabbb"},
-      {"siteName": "Hoge", "imagePath": "https://dummyimage.com/300x600/000/ccc", "url": "aaabbb"},
-      {"siteName": "Fuga", "imagePath": "https://dummyimage.com/300x600/000/f00", "url": "aaabbb"},
-      {"siteName": "piyo", "imagePath": "https://dummyimage.com/300x600/000/f00", "url": "aaabbb"}
-    ],
-    "key": 3
-  },
-  {
-    "companyName": "株式会社hoo",
-    "job": "Web Designer",
-    "status": "正社員",
-    "experience": "2008.09 〜 2010.03",
-    "description": "デザイン/HTMLコーディング/Flashと一通りのWeb制作を担当しました",
+    "companyName": "companyName",
+    "job": "job",
+    "status": "status",
+    "experience": "experience",
+    "description": "description",
     "projects": [
       {
-        "siteName": "ddd",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
+        "siteName": "siteName",
+        "image": [
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
+        "description": "descriptiondescriptiondescription",
+        "url": "url",
+        "charge": "charge",
+        "experience": "experience",
+        "other": "other"
       },
+
       {
-        "siteName": "eee",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
+        "siteName": "siteName",
+        "image": [
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
+        "description": "descriptiondescriptiondescription",
+        "url": "url",
+        "charge": "charge",
+        "experience": "experience",
+        "other": "other"
       }
     ],
-    "key": 4
-  },
-  {
-    "companyName": "株式会社hogefuga",
-    "job": "Sales Staff",
-    "status": "正社員",
-    "experience": "2004.09 〜 2007.11",
-    "description": "フライヤーの制作を担当しました",
-   "projects": [
-      {
-        "siteName": "fff",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      },
-      {
-        "siteName": "ggg",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      }
-    ],
-    "key": 5
-  },
-  {
-    "companyName": "株式会社hogefuga",
-    "job": "DTP Operator",
-    "status": "正社員",
-    "experience": "2003.07 〜 2004.08",
-    "description": "デザインに関しては様々なタイプの広告を作成しましたので引き出しを増やすことができました。",
-   "projects": [
-      {
-        "siteName": "hh",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      },
-      {
-        "siteName": "ii",
-        "imagePath": [
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff",
-          "https://dummyimage.com/300x600/000/fff"
-        ],
-        "description": "JavaScriptコーディングを担当。スマートフォンサイトに関してはSass&Compassによるコーディングも行いました。",
-        "url": "aaabbb",
-        "charge": "JavaScript",
-        "experience": "2014.01 〜 2014.07",
-        "develop": "Grunt / Browserify / Assemble / Handlebars.js / Sass / GitHub / Git",
-        "link": "#"
-      }
-    ],
-    "key": 6
+    "key": "key-2"
   }
 ]
