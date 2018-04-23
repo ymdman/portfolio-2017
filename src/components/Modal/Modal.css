@@ -9,19 +9,44 @@
 }
 
 .modal__inner {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  height: inherit;
   background-color: #fff;
+  padding: 60px 15%;
+  display: flex;
 }
 
-.modal-image-list {
+.modal-datail {
+  width: 50%;
+}
+
+.modal-datail__title {
+  font-size: var(--fs-x-large);
+}
+
+.modal-datail__description {
+  margin-top: 20px;
+}
+
+.modal-datail__list {
+  margin-top: 20px;
+}
+
+.modal-image {
+  width: 50%;
+  margin-left: 20px;
+  overflow: hidden;
+  border-bottom: solid 1px var(--clr-light-glay);
+}
+
+.modal-image__list {
   display: flex;
+  border: solid 1px var(--clr-light-glay);
+  padding: 10px;
 
   & > li {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+    & + li {
+      display: none;
+    }
   }
 }
 
@@ -30,6 +55,9 @@
 }
 
 .modal__close-btn {
+  position: absolute;
   cursor: pointer;
   outline: 0;
+  top: 20px;
+  right: 15%;
 }
