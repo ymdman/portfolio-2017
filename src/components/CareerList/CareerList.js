@@ -25,6 +25,10 @@ const CareerList = props => (
                   <div
                     onClick={() => {
                       props.actions.showModal(project);
+                      props.actions.changeModalImage({
+                        url: project.image[0].url,
+                        alt: project.image[0].alt,
+                      });
                     }}
                     role="button"
                     tabIndex="0"

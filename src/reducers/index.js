@@ -17,6 +17,10 @@ const initialState = {
     experience: '',
     other: '',
   },
+  modalImage: {
+    url: '',
+    alt: '',
+  },
 };
 
 const reducer = (state = initialState, action) => {
@@ -58,6 +62,14 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         showModal: !state.showModal,
         modalContent: action.modalContent,
+      });
+
+    case ActionTypes.CHANGE_MODAL_IMAGE:
+      return Object.assign({}, state, {
+        modalImage: {
+          url: action.modalImage.url,
+          alt: action.modalImage.alt,
+        },
       });
 
     default:

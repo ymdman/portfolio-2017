@@ -17,6 +17,7 @@
 
 .modal-datail {
   width: 50%;
+  text-align: left;
 }
 
 .modal-datail__title {
@@ -29,6 +30,59 @@
 
 .modal-datail__list {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > dt {
+    width: 80px;
+
+    &::after {
+      content: ':';
+    }
+  }
+
+  & > dd {
+    width: calc(100% - 80px);
+
+    & + dt,
+    & + dt + dd {
+      margin-top: 3px;
+    }
+  }
+}
+
+.modal-datail__thumbnail {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+
+  & > li {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: solid 1px var(--clr-light-glay);
+    padding: 5px;
+
+    & + li {
+      margin-left: 10px;
+    }
+  }
+
+  & img {
+    max-width: 100%;
+  }
+}
+
+.modal-datail__link-btn {
+  margin-top: 20px;
+
+  & > a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background-color: var(--clr-thema);
+    padding: 5px 15px;
+  }
 }
 
 .modal-image {
@@ -38,20 +92,13 @@
   border-bottom: solid 1px var(--clr-light-glay);
 }
 
-.modal-image__list {
-  display: flex;
+.modal-image__inner {
   border: solid 1px var(--clr-light-glay);
   padding: 10px;
 
-  & > li {
-    & + li {
-      display: none;
-    }
+  & img {
+    max-width: 100%;
   }
-}
-
-.modal-image-list__image {
-  max-width: 100%;
 }
 
 .modal__close-btn {
@@ -60,4 +107,25 @@
   outline: 0;
   top: 20px;
   right: 15%;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: var(--clr-base);
+    position: absolute;
+    top: 50%;
+    left: -15px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
+

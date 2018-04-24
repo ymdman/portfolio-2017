@@ -8,23 +8,18 @@ class Modal extends React.Component {
     super();
 
     this.toggleModal = this.toggleModal.bind(this);
-    this.getWindowHeight = this.getWindowHeight.bind(this);
   }
 
   componentDidMount() {
-    this.getWindowHeight();
+    this.props.actions.getWindowHeight();
 
     window.addEventListener(
       'resize',
       () => {
-        this.getWindowHeight();
+        this.props.actions.getWindowHeight();
       },
       false,
     );
-  }
-
-  getWindowHeight() {
-    this.props.actions.getWindowHeight();
   }
 
   toggleModal() {
@@ -50,15 +45,34 @@ class Modal extends React.Component {
               {this.props.currentState.modalContent.description}
             </p>
             <dl className="modal-datail__list">
-              <dt>Site / サイト</dt>
+              <dt>サイト名</dt>
               <dd>{this.props.currentState.modalContent.siteName}</dd>
-              <dt>Charge / 担当</dt>
+              <dt>担当</dt>
               <dd>{this.props.currentState.modalContent.charge}</dd>
-              <dt>Experience / 期間</dt>
+              <dt>期間</dt>
               <dd>{this.props.currentState.modalContent.experience}</dd>
-              <dt>Other / その他</dt>
+              <dt>その他</dt>
               <dd>{this.props.currentState.modalContent.other}</dd>
             </dl>
+
+            <ul className="modal-datail__thumbnail">
+              {this.props.currentState.modalContent.image.map(image => (
+                <li key={image.key}>
+                  <div
+                    onClick={e => {
+                      this.props.actions.changeModalImage({
+                        url: e.target.src,
+                        alt: e.target.alt,
+                      });
+                    }}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    <img src={image.url} alt={image.alt} />
+                  </div>
+                </li>
+              ))}
+            </ul>
 
             {(() => {
               if (!this.props.currentState.modalContent.url) {
@@ -66,7 +80,7 @@ class Modal extends React.Component {
               }
 
               return (
-                <p>
+                <p className="modal-datail__link-btn">
                   <a
                     href={this.props.currentState.modalContent.url}
                     target="_blank"
@@ -79,23 +93,22 @@ class Modal extends React.Component {
           </div>
 
           <div className="modal-image">
-            <ul className="modal-image__list">
-              {this.props.currentState.modalContent.image.map(image => (
-                <li key={image.key}>
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="modal-image-list__image"
-                  />
-                </li>
-              ))}
-            </ul>
+            <div className="modal-image__inner">
+              <img
+                src={this.props.currentState.modalImage.url}
+                alt={this.props.currentState.modalImage.alt}
+              />
+            </div>
           </div>
         </div>
 
         <div
           onClick={() => {
             this.props.actions.showModal({ image: [] });
+            this.props.actions.changeModalImage({
+              url: '',
+              alt: '',
+            });
             this.toggleModal();
           }}
           role="button"
@@ -113,11 +126,13 @@ Modal.propTypes = {
   actions: React.PropTypes.shape({
     showModal: React.PropTypes.func.isRequired,
     getWindowHeight: React.PropTypes.func.isRequired,
+    changeModalImage: React.PropTypes.func.isRequired,
   }),
   currentState: React.PropTypes.shape({
     modalContent: React.PropTypes.object.isRequired,
     showModal: React.PropTypes.boolean,
     windowHeight: React.PropTypes.number.isRequired,
+    modalImage: React.PropTypes.object.isRequired,
   }),
 };
 

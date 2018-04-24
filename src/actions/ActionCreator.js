@@ -44,9 +44,15 @@ const showModal = modalContent => ({
   modalContent,
 });
 
+const changeModalImage = modalImage => ({
+  type: ActionTypes.CHANGE_MODAL_IMAGE,
+  modalImage,
+});
+
 export default {
   changeDrawerMenu,
   getWindowHeight,
   fetchPost,
   showModal,
+  changeModalImage,
 };
