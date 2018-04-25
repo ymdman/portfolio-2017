@@ -109,8 +109,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataJS}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
           <li>
@@ -119,8 +119,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataHTML}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
           <li>
@@ -129,8 +129,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataCSS}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
           <li>
@@ -139,8 +139,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataNode}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
           <li>
@@ -149,8 +149,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataPHP}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
           <li>
@@ -159,8 +159,8 @@ const SkillGraph = () => (
             <Doughnut
               data={dataDesign}
               options={options}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
             />
           </li>
         </ul>
