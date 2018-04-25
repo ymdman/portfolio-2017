@@ -10,7 +10,7 @@ import GlobalFooter from '../components/GlobalFooter/GlobalFooter';
 import DrawerMenu from '../components/DrawerMenu/DrawerMenu';
 import ContentAbout from '../components/ContentAbout/ContentAbout';
 import ContentSkill from '../components/ContentSkill/ContentSkill';
-import ContentCareer from '../components/ContentCareer/ContentCareer';
+import ContentWorks from '../components/ContentWorks/ContentWorks';
 
 const sidebarStyles = {
   sidebar: {
@@ -54,7 +54,7 @@ class App extends React.Component {
                   render={() => <ContentAbout {...props} />}
                 />
                 <Route path="/skill" component={ContentSkill} />
-                <Route path="/career" component={ContentCareer} />
+                <Route path="/works" component={ContentWorks} />
               </Switch>
             </main>
             <GlobalFooter />

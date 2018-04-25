@@ -3,24 +3,24 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ActionCreator from '../../actions/ActionCreator';
 
-const CareerList = props => (
+const WorksList = props => (
   <div className="l-content">
     <div className="l-content__detail">
-      <ul className="career-list">
-        {props.currentState.careerData.map(career => (
-          <li key={career.key}>
-            <h3 className="career-list__title">{career.companyName}</h3>
-            <dl className="career-list__detail">
+      <ul className="works-list">
+        {props.currentState.worksData.map(works => (
+          <li key={works.key}>
+            <h3 className="works-list__title">{works.companyName}</h3>
+            <dl className="works-list__detail">
               <dt>職種</dt>
-              <dd>{career.job}</dd>
+              <dd>{works.job}</dd>
               <dt>雇用形態</dt>
-              <dd>{career.status}</dd>
+              <dd>{works.status}</dd>
               <dt>期間</dt>
-              <dd>{career.experience}</dd>
+              <dd>{works.experience}</dd>
             </dl>
-            <p className="career-list__description">{career.description}</p>
-            <ul className="career-list__project">
-              {career.projects.map(project => (
+            <p className="works-list__description">{works.description}</p>
+            <ul className="works-list__project">
+              {works.projects.map(project => (
                 <li key={project.siteName}>
                   <div
                     onClick={() => {
@@ -32,19 +32,17 @@ const CareerList = props => (
                     }}
                     role="button"
                     tabIndex="0"
-                    className="career-project"
+                    className="works-project"
                   >
-                    <div className="career-project__image">
-                      <div className="career-project__image-inner">
+                    <div className="works-project__image">
+                      <div className="works-project__image-inner">
                         <img
                           src={project.image[0].src}
                           alt={project.image[0].alt}
                         />
                       </div>
                     </div>
-                    <h4 className="career-project__title">
-                      {project.siteName}
-                    </h4>
+                    <h4 className="works-project__title">{project.siteName}</h4>
                   </div>
                 </li>
               ))}
@@ -56,13 +54,13 @@ const CareerList = props => (
   </div>
 );
 
-CareerList.propTypes = {
+WorksList.propTypes = {
   currentState: React.PropTypes.shape({
-    careerData: React.PropTypes.array.isRequired,
+    worksData: React.PropTypes.array.isRequired,
   }),
 };
 
-CareerList.defaultProps = {
+WorksList.defaultProps = {
   currentState: {},
 };
 
@@ -72,4 +70,4 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(ActionCreator, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CareerList);
+export default connect(mapStateToProps, mapDispatchToProps)(WorksList);

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ActionCreator from '../../actions/ActionCreator';
 
-import CareerList from '../CareerList/CareerList';
+import WorksList from '../WorksList/WorksList';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loading from '../Loading/Loading';
 import Modal from '../Modal/Modal';
@@ -15,14 +15,14 @@ class ContentCareer extends React.Component {
 
   render() {
     const currentState = this.props.currentState;
-    let careerList;
+    let worksList;
     let loading;
     let errorMessage;
 
     if (currentState.response) {
       loading = <Loading />;
     } else if (currentState.postSucces) {
-      careerList = <CareerList />;
+      worksList = <WorksList />;
     } else if (currentState.postFailure) {
       errorMessage = <ErrorMessage />;
     }
@@ -37,7 +37,7 @@ class ContentCareer extends React.Component {
             また、公開終了しているサイトとWeb以外の制作物にはリンクボタンが付いておりません。
           </p>
           {loading}
-          {careerList}
+          {worksList}
           {errorMessage}
           <Modal />
         </div>

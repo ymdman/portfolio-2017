@@ -15,9 +15,9 @@ const postRequest = () => ({
   type: ActionTypes.POST_REQUSET,
 });
 
-const postSucces = careerData => ({
+const postSucces = worksData => ({
   type: ActionTypes.POST_SUCCESS,
-  careerData,
+  worksData,
 });
 
 const postFailure = () => ({
@@ -28,7 +28,7 @@ const fetchPost = () => dispatch => {
   dispatch(postRequest());
 
   request
-    .get('./data/_career.json')
+    .get('./data/_works.json')
     .set('Content-Type', 'application/json')
     .end((err, res) => {
       if (err) {

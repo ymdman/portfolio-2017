@@ -1,5 +1,5 @@
 node_modules/
 .DS_Store
 npm-debug.log
-**/_career.json
-**/images/career/*.jpg
+**/_works.json
+**/images/works/*.jpg

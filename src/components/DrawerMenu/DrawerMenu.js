@@ -27,12 +27,12 @@ const DrawerMenu = props => (
       </li>
       <li>
         <Link
-          to="/career"
+          to="/works"
           onClick={() => {
             props.actions.changeDrawerMenu();
           }}
         >
-          Career
+          Works
         </Link>
       </li>
     </ul>

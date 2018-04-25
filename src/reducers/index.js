@@ -6,7 +6,7 @@ const initialState = {
   response: false,
   postSucces: false,
   postFailure: false,
-  careerData: [],
+  worksData: [],
   showModal: false,
   modalContent: {
     siteName: '',
@@ -47,7 +47,7 @@ const reducer = (state = initialState, action) => {
         response: false,
         postSucces: true,
         postFailure: false,
-        careerData: action.careerData,
+        worksData: action.worksData,
       });
 
     case ActionTypes.POST_FAILURE:
@@ -55,7 +55,7 @@ const reducer = (state = initialState, action) => {
         response: false,
         postSucces: false,
         postFailure: true,
-        careerData: action.careerData,
+        worksData: action.worksData,
       });
 
     case ActionTypes.SHOW_MODAL:
