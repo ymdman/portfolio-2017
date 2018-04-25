@@ -60,15 +60,16 @@ class Modal extends React.Component {
                 <li key={image.key}>
                   <div
                     onClick={e => {
+                      console.log(e.target);
                       this.props.actions.changeModalImage({
-                        url: e.target.src,
+                        src: e.target.src,
                         alt: e.target.alt,
                       });
                     }}
                     role="button"
                     tabIndex="0"
                   >
-                    <img src={image.url} alt={image.alt} />
+                    <img src={image.src} alt={image.alt} />
                   </div>
                 </li>
               ))}
@@ -95,7 +96,7 @@ class Modal extends React.Component {
           <div className="modal-image">
             <div className="modal-image__inner">
               <img
-                src={this.props.currentState.modalImage.url}
+                src={this.props.currentState.modalImage.src}
                 alt={this.props.currentState.modalImage.alt}
               />
             </div>
@@ -106,7 +107,7 @@ class Modal extends React.Component {
           onClick={() => {
             this.props.actions.showModal({ image: [] });
             this.props.actions.changeModalImage({
-              url: '',
+              src: '',
               alt: '',
             });
             this.toggleModal();

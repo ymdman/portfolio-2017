@@ -26,7 +26,7 @@ const CareerList = props => (
                     onClick={() => {
                       props.actions.showModal(project);
                       props.actions.changeModalImage({
-                        url: project.image[0].url,
+                        src: project.image[0].src,
                         alt: project.image[0].alt,
                       });
                     }}
@@ -37,7 +37,7 @@ const CareerList = props => (
                     <div className="career-project__image">
                       <div className="career-project__image-inner">
                         <img
-                          src={project.image[0].url}
+                          src={project.image[0].src}
                           alt={project.image[0].alt}
                         />
                       </div>

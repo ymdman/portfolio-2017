@@ -9,8 +9,8 @@
       {
         "siteName": "siteName",
         "image": [
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
         "description": "descriptiondescriptiondescription",
         "url": "url",
@@ -22,8 +22,8 @@
       {
         "siteName": "siteName",
         "image": [
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
         "description": "descriptiondescriptiondescription",
         "url": "url",
@@ -45,8 +45,8 @@
       {
         "siteName": "siteName",
         "image": [
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
         "description": "descriptiondescriptiondescription",
         "url": "url",
@@ -58,8 +58,8 @@
       {
         "siteName": "siteName",
         "image": [
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
-          {"url": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-1" },
+          {"src": "https://dummyimage.com/1000x1000/000/fff", "alt": "", "key": "key-2" }
         ],
         "description": "descriptiondescriptiondescription",
         "url": "url",
