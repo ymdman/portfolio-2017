@@ -55,7 +55,7 @@ class Modal extends React.Component {
               <dd>{this.props.currentState.modalContent.other}</dd>
             </dl>
 
-            <ul className="modal-datail__thumbnail">
+            <ul className="modal-datail__thumbnail-list">
               {this.props.currentState.modalContent.image.map(image => (
                 <li key={image.key}>
                   <div
@@ -68,6 +68,7 @@ class Modal extends React.Component {
                     }}
                     role="button"
                     tabIndex="0"
+                    className="modal-datail-thumbnail"
                   >
                     <img src={image.src} alt={image.alt} />
                   </div>

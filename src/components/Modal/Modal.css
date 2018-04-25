@@ -51,26 +51,28 @@
   }
 }
 
-.modal-datail__thumbnail {
+.modal-datail__thumbnail-list {
   display: flex;
   list-style: none;
   margin-top: 20px;
 
-  & > li {
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border: solid 1px var(--clr-light-glay);
-    padding: 5px;
-
-    & + li {
-      margin-left: 10px;
-    }
+  & > li + li {
+    margin-left: 10px;
   }
 
   & img {
     max-width: 100%;
   }
+}
+
+.modal-datail-thumbnail {
+  cursor: pointer;
+  outline: 0;
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: solid 1px var(--clr-light-glay);
 }
 
 .modal-datail__link-btn {
