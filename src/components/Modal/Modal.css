@@ -104,30 +104,17 @@
 }
 
 .modal__close-btn {
+  display: flex;
+  align-items: center;
   position: absolute;
   cursor: pointer;
   outline: 0;
   top: 20px;
   right: 15%;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 2px;
-    background-color: var(--clr-base);
-    position: absolute;
-    top: 50%;
-    left: -15px;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
+.modal-x-icon {
+  fill: var(--clr-base);
+  margin-right: 3px;
 }
 

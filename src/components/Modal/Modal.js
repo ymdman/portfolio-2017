@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { XIcon } from 'react-octicons';
 import ActionCreator from '../../actions/ActionCreator';
 
 class Modal extends React.Component {
@@ -104,20 +105,22 @@ class Modal extends React.Component {
           </div>
         </div>
 
-        <div
-          onClick={() => {
-            this.props.actions.showModal({ image: [] });
-            this.props.actions.changeModalImage({
-              src: '',
-              alt: '',
-            });
-            this.toggleModal();
-          }}
-          role="button"
-          tabIndex="0"
-          className="modal__close-btn"
-        >
-          close
+        <div className="modal__close-btn">
+          <XIcon className="modal-x-icon" />
+          <div
+            onClick={() => {
+              this.props.actions.showModal({ image: [] });
+              this.props.actions.changeModalImage({
+                src: '',
+                alt: '',
+              });
+              this.toggleModal();
+            }}
+            role="button"
+            tabIndex="0"
+          >
+            close
+          </div>
         </div>
       </div>
     );
