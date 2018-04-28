@@ -3,6 +3,7 @@ import Sidebar from 'react-sidebar';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ScrollMemory from 'react-router-scroll-memory';
 import ActionCreator from '../actions/ActionCreator';
 
 import GlobalHeader from '../components/GlobalHeader/GlobalHeader';
@@ -13,8 +14,17 @@ import ContentSkill from '../components/ContentSkill/ContentSkill';
 import ContentWorks from '../components/ContentWorks/ContentWorks';
 
 const sidebarStyles = {
+  root: {
+    overflow: 'visible',
+  },
+
+  content: {
+    overflowY: 'visible',
+  },
+
   sidebar: {
     zIndex: 300,
+    position: 'fixed',
   },
 
   overlay: {
@@ -39,6 +49,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="l-wrapper">
+          <ScrollMemory />
           <Sidebar
             sidebar={<DrawerMenu {...props} />}
             open={props.currentState.drawerMenu}
