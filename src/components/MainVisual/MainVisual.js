@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChevronDownIcon } from 'react-octicons';
 
 export default class MainVisual extends React.Component {
   constructor() {
@@ -35,6 +36,16 @@ export default class MainVisual extends React.Component {
             Front End Engineer / Web Designer
           </p>
         </div>
+        <ChevronDownIcon
+          onClick={() => {
+            window.scrollTo(0, this.props.currentState.windowHeight);
+          }}
+          role="button"
+          tabIndex="0"
+          width="48"
+          height="48"
+          className="main-visual__scroll-btn"
+        />
       </div>
     );
   }

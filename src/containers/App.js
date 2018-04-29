@@ -37,10 +37,27 @@ class App extends React.Component {
     super();
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.setSidebarStyles = this.setSidebarStyles.bind(this);
   }
 
   onSetSidebarOpen() {
     this.props.actions.changeDrawerMenu();
+  }
+
+  setSidebarStyles() {
+    if (this.props.currentState.showModal) {
+      setTimeout(() => {
+        sidebarStyles.root.overflow = 'hidden';
+        sidebarStyles.content.overflowY = 'scroll';
+      }, 0);
+
+      return sidebarStyles;
+    }
+
+    sidebarStyles.root.overflow = 'visible';
+    sidebarStyles.content.overflowY = 'visible';
+
+    return sidebarStyles;
   }
 
   render() {
@@ -54,7 +71,7 @@ class App extends React.Component {
             sidebar={<DrawerMenu {...props} />}
             open={props.currentState.drawerMenu}
             onSetOpen={this.onSetSidebarOpen}
-            styles={sidebarStyles}
+            styles={this.setSidebarStyles()}
           >
             <GlobalHeader {...props} />
             <main className="l-main">
@@ -82,6 +99,7 @@ App.propTypes = {
   }),
   currentState: React.PropTypes.shape({
     drawerMenu: React.PropTypes.bool.isRequired,
+    showModal: React.PropTypes.bool.isRequired,
   }),
 };
 

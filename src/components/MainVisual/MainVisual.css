@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .main-visual__inner {
@@ -24,6 +25,14 @@
 
 .main-visual-title-job {
   font-size: var(--fs-x-large);
+}
+
+.main-visual__scroll-btn {
+  fill: #fff;
+  cursor: pointer;
+  outline: 0;
+  position: absolute;
+  bottom: 100px;
 }
 
 @media (--mq-sp) {
