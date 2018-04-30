@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const DrawerMenu = props => (
@@ -40,8 +41,8 @@ const DrawerMenu = props => (
 );
 
 DrawerMenu.propTypes = {
-  actions: React.PropTypes.shape({
-    changeDrawerMenu: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    changeDrawerMenu: PropTypes.func.isRequired,
   }),
 };
 

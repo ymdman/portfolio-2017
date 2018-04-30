@@ -7,7 +7,7 @@ const initialState = {
   postSucces: false,
   postFailure: false,
   worksData: [],
-  showModal: false,
+  isVisibleModal: false,
   modalContent: {
     siteName: '',
     image: [],
@@ -60,7 +60,7 @@ const reducer = (state = initialState, action) => {
 
     case ActionTypes.SHOW_MODAL:
       return Object.assign({}, state, {
-        showModal: !state.showModal,
+        isVisibleModal: !state.isVisibleModal,
         modalContent: action.modalContent,
       });
 

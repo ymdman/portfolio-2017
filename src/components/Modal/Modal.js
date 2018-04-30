@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { XIcon } from 'react-octicons';
@@ -24,7 +25,7 @@ class Modal extends React.Component {
   }
 
   toggleModal() {
-    if (this.props.currentState.showModal) {
+    if (this.props.currentState.isVisibleModal) {
       return { display: 'block' };
     }
 
@@ -128,16 +129,16 @@ class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  actions: React.PropTypes.shape({
-    showModal: React.PropTypes.func.isRequired,
-    getWindowHeight: React.PropTypes.func.isRequired,
-    changeModalImage: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    showModal: PropTypes.func.isRequired,
+    getWindowHeight: PropTypes.func.isRequired,
+    changeModalImage: PropTypes.func.isRequired,
   }),
-  currentState: React.PropTypes.shape({
-    modalContent: React.PropTypes.object.isRequired,
-    showModal: React.PropTypes.boolean,
-    windowHeight: React.PropTypes.number.isRequired,
-    modalImage: React.PropTypes.object.isRequired,
+  currentState: PropTypes.shape({
+    modalContent: PropTypes.object.isRequired,
+    isVisibleModal: PropTypes.bool.isRequired,
+    windowHeight: PropTypes.number.isRequired,
+    modalImage: PropTypes.object.isRequired,
   }),
 };
 

@@ -8,7 +8,6 @@ import App from './containers/App';
 import './main.css';
 
 const store = createFinalStore();
-
 ReactDom.render(
   <Provider store={store}>
     <App />

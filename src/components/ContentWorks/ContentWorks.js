@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ActionCreator from '../../actions/ActionCreator';
@@ -14,16 +15,16 @@ class ContentCareer extends React.Component {
   }
 
   render() {
-    const currentState = this.props.currentState;
+    // const currentState = this.props.currentState;
     let worksList;
     let loading;
     let errorMessage;
 
-    if (currentState.response) {
+    if (this.props.currentState.response) {
       loading = <Loading />;
-    } else if (currentState.postSucces) {
+    } else if (this.props.currentState.postSucces) {
       worksList = <WorksList />;
-    } else if (currentState.postFailure) {
+    } else if (this.props.currentState.postFailure) {
       errorMessage = <ErrorMessage />;
     }
 
@@ -47,11 +48,13 @@ class ContentCareer extends React.Component {
 }
 
 ContentCareer.propTypes = {
-  actions: React.PropTypes.shape({
-    fetchPost: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    fetchPost: PropTypes.func.isRequired,
   }),
-  currentState: React.PropTypes.shape({
-    postSucces: React.PropTypes.bool.isRequired,
+  currentState: PropTypes.shape({
+    response: PropTypes.bool.isRequired,
+    postSucces: PropTypes.bool.isRequired,
+    postFailure: PropTypes.bool.isRequired,
   }),
 };
 

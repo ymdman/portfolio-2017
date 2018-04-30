@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ThreeBarsIcon } from 'react-octicons';
 
 const GlobalHeader = props => (
@@ -21,8 +22,8 @@ const GlobalHeader = props => (
 );
 
 GlobalHeader.propTypes = {
-  actions: React.PropTypes.shape({
-    changeDrawerMenu: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    changeDrawerMenu: PropTypes.func.isRequired,
   }),
 };
 

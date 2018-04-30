@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Sidebar from 'react-sidebar';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -45,7 +46,7 @@ class App extends React.Component {
   }
 
   setSidebarStyles() {
-    if (this.props.currentState.showModal) {
+    if (this.props.currentState.isVisibleModal) {
       setTimeout(() => {
         sidebarStyles.root.overflow = 'hidden';
         sidebarStyles.content.overflowY = 'scroll';
@@ -61,25 +62,23 @@ class App extends React.Component {
   }
 
   render() {
-    const props = this.props;
-
     return (
       <BrowserRouter>
         <div className="l-wrapper">
           <ScrollMemory />
           <Sidebar
-            sidebar={<DrawerMenu {...props} />}
-            open={props.currentState.drawerMenu}
+            sidebar={<DrawerMenu {...this.props} />}
+            open={this.props.currentState.drawerMenu}
             onSetOpen={this.onSetSidebarOpen}
             styles={this.setSidebarStyles()}
           >
-            <GlobalHeader {...props} />
+            <GlobalHeader {...this.props} />
             <main className="l-main">
               <Switch>
                 <Route
                   exact
                   path="/"
-                  render={() => <ContentAbout {...props} />}
+                  render={() => <ContentAbout {...this.props} />}
                 />
                 <Route path="/skill" component={ContentSkill} />
                 <Route path="/works" component={ContentWorks} />
@@ -94,12 +93,12 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  actions: React.PropTypes.shape({
-    changeDrawerMenu: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    changeDrawerMenu: PropTypes.func.isRequired,
   }),
-  currentState: React.PropTypes.shape({
-    drawerMenu: React.PropTypes.bool.isRequired,
-    showModal: React.PropTypes.bool.isRequired,
+  currentState: PropTypes.shape({
+    drawerMenu: PropTypes.bool.isRequired,
+    isVisibleModal: PropTypes.bool.isRequired,
   }),
 };
 

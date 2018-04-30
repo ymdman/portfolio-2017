@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ChevronDownIcon } from 'react-octicons';
 
 export default class MainVisual extends React.Component {
@@ -52,11 +53,11 @@ export default class MainVisual extends React.Component {
 }
 
 MainVisual.propTypes = {
-  actions: React.PropTypes.shape({
-    getWindowHeight: React.PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    getWindowHeight: PropTypes.func.isRequired,
   }),
-  currentState: React.PropTypes.shape({
-    windowHeight: React.PropTypes.number.isRequired,
+  currentState: PropTypes.shape({
+    windowHeight: PropTypes.number.isRequired,
   }),
 };
 

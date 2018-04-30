@@ -13,13 +13,13 @@ const ContentAbout = props => (
           フロントエンド・エンジニアKazuhiro
           Yamadaのポートフォリオサイトになります。<br />
           当サイトはReact+Reduxを使用しSPAで実装しております。<br />
-          ソースは<a
+          {/* ソースは<a
             href="https://github.com/ymdman/portfolio-2018"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
-          </a>にて公開してますのでご確認頂けると幸いです。
+          </a>にて公開してますのでご確認頂けると幸いです。 */}
         </p>
         <AboutSite />
         <Profile />

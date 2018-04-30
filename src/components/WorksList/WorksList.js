@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ActionCreator from '../../actions/ActionCreator';
@@ -55,8 +56,8 @@ const WorksList = props => (
 );
 
 WorksList.propTypes = {
-  currentState: React.PropTypes.shape({
-    worksData: React.PropTypes.array.isRequired,
+  currentState: PropTypes.shape({
+    worksData: PropTypes.array.isRequired,
   }),
 };
 
