@@ -34,93 +34,121 @@ class Modal extends React.Component {
 
   render() {
     return (
-      <div className="modal" style={this.toggleModal()}>
+      <div
+        onClick={() => {
+          this.props.actions.showModal({ image: [] });
+          this.props.actions.changeModalImage({
+            src: '',
+            alt: '',
+          });
+          this.toggleModal();
+        }}
+        role="button"
+        tabIndex="0"
+        className="modal"
+        style={this.toggleModal()}
+      >
         <div
-          className="modal__inner"
-          style={{ height: this.props.currentState.windowHeight - 120 }}
+          className="fuga"
+          onClick={e => {
+            e.stopPropagation();
+          }}
+          role="button"
+          tabIndex="0"
         >
-          <div className="modal-datail">
-            <h2 className="modal-datail__title">
-              {this.props.currentState.modalContent.siteName}
-            </h2>
-            <p className="modal-datail__description">
-              {this.props.currentState.modalContent.description}
-            </p>
-            <dl className="modal-datail__list">
-              <dt>サイト名</dt>
-              <dd>{this.props.currentState.modalContent.siteName}</dd>
-              <dt>担当</dt>
-              <dd>{this.props.currentState.modalContent.charge}</dd>
-              <dt>期間</dt>
-              <dd>{this.props.currentState.modalContent.experience}</dd>
-              <dt>その他</dt>
-              <dd>{this.props.currentState.modalContent.other}</dd>
-            </dl>
-
-            <ul className="modal-datail__thumbnail-list">
-              {this.props.currentState.modalContent.image.map(image => (
-                <li key={image.key}>
-                  <div
-                    onClick={e => {
-                      console.log(e.target);
-                      this.props.actions.changeModalImage({
-                        src: e.target.src,
-                        alt: e.target.alt,
-                      });
-                    }}
-                    role="button"
-                    tabIndex="0"
-                    className="modal-datail-thumbnail"
-                  >
-                    <img src={image.src} alt={image.alt} />
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            {(() => {
-              if (!this.props.currentState.modalContent.url) {
-                return false;
-              }
-
-              return (
-                <p className="modal-datail__link-btn">
-                  <a
-                    href={this.props.currentState.modalContent.url}
-                    target="_blank"
-                  >
-                    Visit This Site
-                  </a>
-                </p>
-              );
-            })()}
-          </div>
-
-          <div className="modal-image">
-            <div className="modal-image__inner">
-              <img
-                src={this.props.currentState.modalImage.src}
-                alt={this.props.currentState.modalImage.alt}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="modal__close-btn">
-          <XIcon className="modal-x-icon" />
           <div
-            onClick={() => {
-              this.props.actions.showModal({ image: [] });
-              this.props.actions.changeModalImage({
-                src: '',
-                alt: '',
-              });
-              this.toggleModal();
-            }}
-            role="button"
-            tabIndex="0"
+            className="modal__inner"
+            style={{ height: this.props.currentState.windowHeight - 80 }}
           >
-            close
+            <div className="modal-datail">
+              <h2 className="modal-datail__title">
+                {this.props.currentState.modalContent.siteName}
+              </h2>
+              <p className="modal-datail__description">
+                {this.props.currentState.modalContent.description}
+              </p>
+              <dl className="modal-datail__list">
+                <dt>
+                  <dfn>サイト名</dfn>
+                </dt>
+                <dd>{this.props.currentState.modalContent.siteName}</dd>
+                <dt>
+                  <dfn>担当</dfn>
+                </dt>
+                <dd>{this.props.currentState.modalContent.charge}</dd>
+                <dt>
+                  <dfn>期間</dfn>
+                </dt>
+                <dd>{this.props.currentState.modalContent.experience}</dd>
+                <dt>
+                  <dfn>その他</dfn>
+                </dt>
+                <dd>{this.props.currentState.modalContent.other}</dd>
+              </dl>
+
+              <ul className="modal-datail__thumbnail-list">
+                {this.props.currentState.modalContent.image.map(image => (
+                  <li key={image.key}>
+                    <div
+                      onClick={e => {
+                        console.log(e.target);
+                        this.props.actions.changeModalImage({
+                          src: e.target.src,
+                          alt: e.target.alt,
+                        });
+                      }}
+                      role="button"
+                      tabIndex="0"
+                      className="modal-datail-thumbnail"
+                    >
+                      <img src={image.src} alt={image.alt} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              {(() => {
+                if (!this.props.currentState.modalContent.url) {
+                  return false;
+                }
+
+                return (
+                  <p className="modal-datail__link-btn">
+                    <a
+                      href={this.props.currentState.modalContent.url}
+                      target="_blank"
+                    >
+                      Visit This Site
+                    </a>
+                  </p>
+                );
+              })()}
+            </div>
+
+            <div className="modal-image">
+              <div className="modal-image__inner">
+                <img
+                  src={this.props.currentState.modalImage.src}
+                  alt={this.props.currentState.modalImage.alt}
+                />
+              </div>
+            </div>
+
+            <div
+              onClick={() => {
+                this.props.actions.showModal({ image: [] });
+                this.props.actions.changeModalImage({
+                  src: '',
+                  alt: '',
+                });
+                this.toggleModal();
+              }}
+              role="button"
+              tabIndex="0"
+              className="modal__close-btn"
+            >
+              <XIcon className="modal-x-icon" />
+            </div>
           </div>
         </div>
       </div>

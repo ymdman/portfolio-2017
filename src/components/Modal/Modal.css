@@ -6,17 +6,23 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 15%;
+  box-sizing: border-box;
+}
+
+.fuga {
+  position: relative;
 }
 
 .modal__inner {
   height: inherit;
   background-color: #fff;
-  padding: 60px 15%;
+  padding: 20px;
   display: flex;
 }
 
 .modal-datail {
-  width: 50%;
+  width: 55%;
   text-align: left;
 }
 
@@ -30,24 +36,12 @@
 
 .modal-datail__list {
   margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
 
   & > dt {
-    width: 80px;
-
-    &::after {
-      content: ':';
-    }
   }
 
-  & > dd {
-    width: calc(100% - 80px);
-
-    & + dt,
-    & + dt + dd {
-      margin-top: 3px;
-    }
+  & > dd + dt {
+    margin-top: 10px;
   }
 }
 
@@ -88,7 +82,7 @@
 }
 
 .modal-image {
-  width: 50%;
+  width: 45%;
   margin-left: 20px;
   overflow: hidden;
   border-bottom: solid 1px var(--clr-light-glay);
@@ -104,17 +98,46 @@
 }
 
 .modal__close-btn {
-  display: flex;
-  align-items: center;
   position: absolute;
   cursor: pointer;
   outline: 0;
-  top: 20px;
-  right: 15%;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--clr-thema);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-x-icon {
-  fill: var(--clr-base);
-  margin-right: 3px;
+  fill: #fff;
 }
 
+@media (--mq-sp) {
+  .modal {
+    padding: 20px 10px;
+  }
+
+  .modal__inner {
+    display: block;
+    padding: 20px 10px;
+    overflow-y: scroll;
+  }
+
+  .modal-datail {
+    width: 100%;
+  }
+
+  .modal-image {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .modal__close-btn {
+    right: -5px;
+  }
+}
