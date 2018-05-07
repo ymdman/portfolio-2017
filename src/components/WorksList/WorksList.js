@@ -19,7 +19,19 @@ const WorksList = props => (
               <dt>期間</dt>
               <dd>{works.experience}</dd>
             </dl>
-            <p className="works-list__description">{works.description}</p>
+            <p className="works-list__description">
+              {works.description.split(/(\n)/g).map(text => {
+                if (text.match(/(\n)/g)) {
+                  const updateText = React.createElement('br', {
+                    key: works.key,
+                  });
+
+                  return updateText;
+                }
+
+                return text;
+              })}
+            </p>
             <ul className="works-list__project">
               {works.projects.map(project => (
                 <li key={project.siteName}>
