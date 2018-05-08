@@ -20,17 +20,20 @@ const WorksList = props => (
               <dd>{works.experience}</dd>
             </dl>
             <p className="works-list__description">
-              {works.description.split(/(\n)/g).map(text => {
+              {/* eslint react/no-array-index-key: 0  */
+              works.description.split(/(\n)/g).map((text, idx) => {
                 if (text.match(/(\n)/g)) {
                   const updateText = React.createElement('br', {
-                    key: works.key,
+                    key: idx,
                   });
 
                   return updateText;
                 }
 
                 return text;
-              })}
+              })
+              /* eslint react/no-array-index-key: 0  */
+              }
             </p>
             <ul className="works-list__project">
               {works.projects.map(project => (
