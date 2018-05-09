@@ -82,7 +82,7 @@ const options = {
 
 const SkillGraph = () => (
   <div className="l-content">
-    <h3 className="l-content__title">Programming + Markup + Design</h3>
+    <h3 className="l-content__title">Programming / Markup</h3>
     <div className="l-content__detail">
       <dl className="fuga">
         <dt>
@@ -90,15 +90,21 @@ const SkillGraph = () => (
         </dt>
         <dd>
           オブジェクト指向で書けライブラリはReact / Vue.js /
-          jQueryを使用できます。<br />モジュール管理はWebpack / Browserify<br />タスクランナーはGulp
-          / Gruntの使用経験があります。
+          jQueryを使用できます。<br />モジュール管理はwebpack /
+          Browserify、タスクランナーはgulp / Gruntの使用経験があります。
         </dd>
         <dt>
           <dfn>CSS</dfn>
         </dt>
         <dd>
-          設計についてはFLOCSS / BEM / SMACSS、<br />altCSSについてはSCSS /
-          Stylus / PostCSSを使用できます。
+          設計についてはFLOCSS / BEM / SMACSS、altCSSについてはSass / Stylus /
+          PostCSSを使用できます。
+        </dd>
+        <dt>
+          <dfn>OTHER</dfn>
+        </dt>
+        <dd>
+          HTMLはセマンティックなマークアップができますし、CMSについてはWordPress開発の経験もあります。
         </dd>
       </dl>
       <div className="skill-graph">

@@ -6,10 +6,10 @@ const AboutSite = () => (
       <dt>サイト構成</dt>
       <dd>
         <ul className="about-site-constitution__list">
-          <li>React</li>
-          <li>Redux</li>
+          <li>React 16.3.2</li>
+          <li>Redux 3.6.0</li>
           <li>ES2015</li>
-          <li>webpack 3</li>
+          <li>webpack 3.6.0</li>
           <li>PostCSS</li>
           <li>cssnext</li>
         </ul>
