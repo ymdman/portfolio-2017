@@ -8,3 +8,4 @@
 - Redux 3.6.0
 - Webpack 3.6.0
 - PostCSS
+- cssnext
