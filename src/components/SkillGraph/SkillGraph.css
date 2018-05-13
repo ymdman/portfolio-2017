@@ -30,9 +30,17 @@
   left: calc(50% - 1em);
 }
 
-.fuga {
+.skill-description {
+  & > dt {
+    font-size: var(--fs-large);
+  }
+
+  & > dd {
+    margin-top: 5px;
+  }
+
   & > dd + dt {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 

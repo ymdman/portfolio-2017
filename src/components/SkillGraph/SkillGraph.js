@@ -84,7 +84,7 @@ const SkillGraph = () => (
   <div className="l-content">
     <h3 className="l-content__title">Programming / Markup</h3>
     <div className="l-content__detail">
-      <dl className="fuga">
+      <dl className="skill-description">
         <dt>
           <dfn>JavaScript(ES2015)</dfn>
         </dt>
