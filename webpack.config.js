@@ -1,6 +1,21 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+const plugins = [new ExtractTextPlugin('bundle.css')];
+
+if (isProduction) {
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+  );
+}
+
 module.exports = {
   entry: {
     bundle: './src/main.js',
@@ -16,9 +31,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-          'eslint-loader'],
+        use: ['babel-loader', 'eslint-loader'],
       },
 
       {
@@ -30,34 +43,24 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true,
+                sourceMap: !isProduction,
               },
             },
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: true,
+                sourceMap: !isProduction,
               },
             },
-            // 'css-loader',
-            // 'postcss-loader',
           ],
         }),
       },
     ],
   },
 
-  plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     NODE_ENV: JSON.stringify('production'),
-    //   },
-    // }),
-    // new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('bundle.css'),
-  ],
+  plugins,
 
-  devtool: 'inline-source-map',
+  devtool: !isProduction ? 'inline-source-map' : '',
 
   devServer: {
     contentBase: './public',
