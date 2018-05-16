@@ -1,6 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ChevronDownIcon } from 'react-octicons';
+import Transition from 'react-transition-group/Transition';
+
+const defaultStyle = {
+  transition: `all 400ms ease-in-out`,
+  transform: 'translateY(20px)',
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 0 },
+  entered: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+};
 
 export default class MainVisual extends React.Component {
   constructor() {
@@ -11,6 +26,7 @@ export default class MainVisual extends React.Component {
 
   componentDidMount() {
     this.getWindowHeight();
+    this.isAnimation = true;
 
     window.addEventListener(
       'resize',
@@ -32,10 +48,32 @@ export default class MainVisual extends React.Component {
         style={{ height: this.props.currentState.windowHeight }}
       >
         <div className="main-visual__inner">
-          <h2 className="main-visual-title-name">Kazuhiro Yamada</h2>
-          <p className="main-visual-title-job">
-            Front End Engineer / Web Designer
-          </p>
+          <Transition in={this.isAnimation} timeout={400}>
+            {state => (
+              <div
+                style={{
+                  ...defaultStyle,
+                  ...transitionStyles[state],
+                }}
+              >
+                <h2 className="main-visual-title-name">Kazuhiro Yamada</h2>
+              </div>
+            )}
+          </Transition>
+          <Transition in={this.isAnimation} timeout={600}>
+            {state => (
+              <div
+                style={{
+                  ...defaultStyle,
+                  ...transitionStyles[state],
+                }}
+              >
+                <p className="main-visual-title-job">
+                  Front End Engineer / Web Designer
+                </p>
+              </div>
+            )}
+          </Transition>
         </div>
         <ChevronDownIcon
           onClick={() => {
