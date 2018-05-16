@@ -10,7 +10,7 @@ module.exports = {
     'postcss-cssnext': {
       browsers: 'last 2 major versions',
     },
-    'cssnano': {
+    cssnano: {
       autoprefixer: false,
       zindex: false,
       normalizeCharset: false,
