@@ -26,7 +26,8 @@
       padding: 10px 30px;
 
       &:hover {
-        background-color: #ccc;
+        background-color: var(--clr-thema);
+        color: #fff;
       }
     }
   }
