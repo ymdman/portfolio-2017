@@ -60,7 +60,7 @@ class Modal extends React.Component {
             className="modal-content"
             style={{ height: this.props.currentState.windowHeight - 80 }}
           >
-            <div className="modal-content__inner">
+            <div className="modal-content__detail">
               <h2 className="modal-title">
                 {this.props.currentState.modalContent.siteName}
               </h2>
@@ -125,8 +125,8 @@ class Modal extends React.Component {
               })()}
             </div>
 
-            <div className="modal-image">
-              <div className="modal-image__inner">
+            <div className="modal-content__image">
+              <div className="modal-image">
                 <img
                   src={this.props.currentState.modalImage.src}
                   alt={this.props.currentState.modalImage.alt}
@@ -145,9 +145,9 @@ class Modal extends React.Component {
               }}
               role="button"
               tabIndex="0"
-              className="modal-close-btn"
+              className="modal-content__close-btn"
             >
-              <XIcon className="modal-close-btn__x-icon" />
+              <XIcon className="modal-x-icon" />
             </div>
           </div>
         </div>
