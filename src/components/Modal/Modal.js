@@ -49,7 +49,7 @@ class Modal extends React.Component {
         style={this.toggleModal()}
       >
         <div
-          className="fuga"
+          className="modal__inner"
           onClick={e => {
             e.stopPropagation();
           }}
@@ -57,17 +57,17 @@ class Modal extends React.Component {
           tabIndex="0"
         >
           <div
-            className="modal__inner"
+            className="modal-content"
             style={{ height: this.props.currentState.windowHeight - 80 }}
           >
-            <div className="modal-datail">
-              <h2 className="modal-datail__title">
+            <div className="modal-content__inner">
+              <h2 className="modal-title">
                 {this.props.currentState.modalContent.siteName}
               </h2>
-              <p className="modal-datail__description">
+              <p className="modal-description">
                 {this.props.currentState.modalContent.description}
               </p>
-              <dl className="modal-datail__list">
+              <dl className="modal-detail-list">
                 <dt>
                   <dfn>サイト名</dfn>
                 </dt>
@@ -86,7 +86,7 @@ class Modal extends React.Component {
                 <dd>{this.props.currentState.modalContent.other}</dd>
               </dl>
 
-              <ul className="modal-datail__thumbnail-list">
+              <ul className="modal-thumbnail-list">
                 {this.props.currentState.modalContent.image.map(image => (
                   <li key={image.key}>
                     <div
@@ -99,7 +99,7 @@ class Modal extends React.Component {
                       }}
                       role="button"
                       tabIndex="0"
-                      className="modal-datail-thumbnail"
+                      className="modal-thumbnail-list__inner"
                     >
                       <img src={image.src} alt={image.alt} />
                     </div>
@@ -113,7 +113,7 @@ class Modal extends React.Component {
                 }
 
                 return (
-                  <p className="modal-datail__link-btn">
+                  <p className="modal-link-btn">
                     <a
                       href={this.props.currentState.modalContent.url}
                       target="_blank"
@@ -145,9 +145,9 @@ class Modal extends React.Component {
               }}
               role="button"
               tabIndex="0"
-              className="modal__close-btn"
+              className="modal-close-btn"
             >
-              <XIcon className="modal-x-icon" />
+              <XIcon className="modal-close-btn__x-icon" />
             </div>
           </div>
         </div>

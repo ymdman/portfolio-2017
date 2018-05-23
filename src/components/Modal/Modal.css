@@ -10,31 +10,31 @@
   box-sizing: border-box;
 }
 
-.fuga {
+.modal__inner {
   position: relative;
 }
 
-.modal__inner {
+.modal-content {
   height: inherit;
   background-color: #fff;
   padding: 20px;
   display: flex;
 }
 
-.modal-datail {
+.modal-content__inner {
   width: 55%;
   text-align: left;
 }
 
-.modal-datail__title {
+.modal-title {
   font-size: var(--fs-x-large);
 }
 
-.modal-datail__description {
+.modal-description {
   margin-top: 20px;
 }
 
-.modal-datail__list {
+.modal-datail-list {
   margin-top: 20px;
 
   & > dt {
@@ -45,7 +45,7 @@
   }
 }
 
-.modal-datail__thumbnail-list {
+.modal-thumbnail-list {
   display: flex;
   list-style: none;
   margin-top: 20px;
@@ -59,7 +59,7 @@
   }
 }
 
-.modal-datail-thumbnail {
+.modal-thumbnail-list__inner {
   cursor: pointer;
   outline: 0;
   padding: 5px;
@@ -69,7 +69,7 @@
   border: solid 1px var(--clr-light-glay);
 }
 
-.modal-datail__link-btn {
+.modal-link-btn {
   margin-top: 20px;
 
   & > a {
@@ -97,7 +97,7 @@
   }
 }
 
-.modal__close-btn {
+.modal-close-btn {
   position: absolute;
   cursor: pointer;
   outline: 0;
@@ -112,7 +112,7 @@
   justify-content: center;
 }
 
-.modal-x-icon {
+.modal-close-btn__x-icon {
   fill: #fff;
 }
 
@@ -121,13 +121,13 @@
     padding: 20px 10px;
   }
 
-  .modal__inner {
+  .modal-content {
     display: block;
     padding: 20px 10px;
     overflow-y: scroll;
   }
 
-  .modal-datail {
+  .modal-content__inner {
     width: 100%;
   }
 
@@ -137,7 +137,7 @@
     margin-left: 0;
   }
 
-  .modal__close-btn {
+  .modal-close-btn {
     right: -5px;
   }
 }
