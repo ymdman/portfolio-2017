@@ -91,7 +91,6 @@ class Modal extends React.Component {
                   <li key={image.key}>
                     <div
                       onClick={e => {
-                        console.log(e.target);
                         this.props.actions.changeModalImage({
                           src: e.target.src,
                           alt: e.target.alt,
