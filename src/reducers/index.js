@@ -2,7 +2,7 @@ import * as ActionTypes from '../constants/actionTypes';
 
 const initialState = {
   drawerMenu: false,
-  windowHeight: 0,
+  windowHeight: window.innerHeight,
   response: false,
   postSucces: false,
   postFailure: false,
@@ -21,6 +21,26 @@ const initialState = {
     src: '',
     alt: '',
   },
+  skillGraph: {
+    js: {
+      datasets: [],
+    },
+    node: {
+      datasets: [],
+    },
+    html: {
+      datasets: [],
+    },
+    css: {
+      datasets: [],
+    },
+    php: {
+      datasets: [],
+    },
+    design: {
+      datasets: [],
+    },
+  },
 };
 
 const reducer = (state = initialState, action) => {
@@ -32,7 +52,7 @@ const reducer = (state = initialState, action) => {
 
     case ActionTypes.WINDOW_HEIGHT:
       return Object.assign({}, state, {
-        windowHeight: window.innerHeight,
+        windowHeight: action.windowHeight,
       });
 
     case ActionTypes.POST_REQUSET:
@@ -70,6 +90,11 @@ const reducer = (state = initialState, action) => {
           src: action.modalImage.src,
           alt: action.modalImage.alt,
         },
+      });
+
+    case ActionTypes.SHOW_SKILL_GRAPH:
+      return Object.assign({}, state, {
+        skillGraph: action.skillGraph,
       });
 
     default:
