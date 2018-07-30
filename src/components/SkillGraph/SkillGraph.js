@@ -60,7 +60,6 @@ class SkillGraph extends React.Component {
   }
 
   showSkillGraph() {
-    console.log('hoge');
     this.scrollTop = window.pageYOffset;
     this.scrollBottom = this.currentWindowHeight + this.scrollTop;
 
