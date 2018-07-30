@@ -39,6 +39,10 @@ class SkillGraph extends React.Component {
     this.attachEvent();
   }
 
+  componentWillUnmount() {
+    this.removeEvent();
+  }
+
   setSkillGraphRect() {
     this.currentWindowHeight = this.props.currentState.windowHeight;
 
@@ -48,16 +52,15 @@ class SkillGraph extends React.Component {
   }
 
   attachEvent() {
-    window.addEventListener(
-      'scroll',
-      () => {
-        this.showSkillGraph();
-      },
-      false,
-    );
+    window.addEventListener('scroll', this.showSkillGraph, false);
+  }
+
+  removeEvent() {
+    window.removeEventListener('scroll', this.showSkillGraph, false);
   }
 
   showSkillGraph() {
+    console.log('hoge');
     this.scrollTop = window.pageYOffset;
     this.scrollBottom = this.currentWindowHeight + this.scrollTop;
 
